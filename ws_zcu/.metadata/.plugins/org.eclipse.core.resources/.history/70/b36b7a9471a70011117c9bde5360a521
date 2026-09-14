@@ -1,0 +1,34 @@
+// ============================================================================
+//  sensor_models.h  -  PS-side EKF linearization ("the E of the EKF")
+// ----------------------------------------------------------------------------
+//  Runs in float on the ARM core. For each sensor it turns a raw measurement
+//  into the scalar rows (H[6], y, r) the PL EKF core consumes. Ported directly
+//  from the Python golden model (h_radar/H_radar/h_ang/H_ang).
+//
+//  Flat per-track buffer layout the PL expects (must match ekf_core.hpp):
+//      [ x(6) | P(36) | 7 rows of (H[6], y, r) ]   = 98 floats, stride TRK_STRIDE
+//  Row order: radar(range,az,el), IRST(az,el), RWR(az,el)  -> nmeas = 7
+// ============================================================================
+#ifndef SENSOR_MODELS_H
+#define SENSOR_MODELS_H
+
+#define SM_N        6
+#define SM_STRIDE   98          // must equal TRK_STRIDE in ekf_core.hpp
+#define SM_OFF_X    0
+#define SM_OFF_P    6
+#define SM_OFF_M    42
+#define SM_MROW     8           // H[6] + y + r
+#define SM_NMEAS    7           // radar3 + IRST2 + RWR2
+#define SM_DT       0.1f
+
+// Predict state only:  xp = F * x   (for the linearization point).
+void sm_predict_state(const float x[6], float xp[6]);
+
+// Fill one track's 98-float block for the PL core, given the prior (x,P) and
+// this epoch's raw sensor measurements. Returns nmeas (always SM_NMEAS here).
+//   radar_z[3] = {range, az, el} ; irst_z[2] = {az, el} ; rwr_z[2] = {az, el}
+int sm_fill_track(float trk_out[SM_STRIDE],
+                  const float x[6], const float P[36],
+                  const float radar_z[3], const float irst_z[2], const float rwr_z[2]);
+
+#endif // SENSOR_MODELS_H

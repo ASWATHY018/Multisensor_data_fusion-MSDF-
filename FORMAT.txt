@@ -1,0 +1,14 @@
+stimulus.csv  - 100 rows, 100 cols each:
+  col 0        : track_id
+  col 1..6     : x_prev[0..5]           (prior state)
+  col 7..42    : P_prev[0..35]          (prior cov, row-major 6x6)
+  col 43       : nmeas                  (= 7)
+  col 44..99   : 7 measurement rows, each 8 values: H[0..5], y, r
+                 order: radar(rng,az,el), IRST(az,el), RWR(az,el)
+
+expected.csv  - 100 rows, 43 cols each:
+  col 0        : track_id
+  col 1..6     : x_post[0..5]           (posterior state)
+  col 7..42    : P_post[0..35]          (posterior cov)
+
+Constants (also hard-coded in ekf_core): DT=0.100  Q_SPECTRAL=40.0

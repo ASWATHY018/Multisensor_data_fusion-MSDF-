@@ -1,0 +1,9 @@
+they're community ADS-B aggregators (adsb.lol, airplanes.live, adsb.fi, adsb.one) that all share the same simple format and only ask ~1 request/second (adsb.lol API, airplanes.live API). Let me add them to the simulator so --live just works out of the box:
+
+Edited 4 files, ran a command, used a tool · 1 note
+
+Yes — the default --live provider is now adsb.lol, which needs no account and no key. Just run:
+
+python sensor_sim.py --board 192.168.1.10 --live --lat 51.15 --lon 6.8 --span 3.0
+
+You should see lines like ADSB [adsblol]: 47 aircraft within 90 nm, and real planes appearing on your scope.

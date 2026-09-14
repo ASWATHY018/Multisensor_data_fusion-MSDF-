@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../ekf_tb.cpp in debug mode
+   Compiling ../../../../ekf_core.cpp in debug mode
+   Generating csim.exe
+Loaded 100 stimulus rows, 100 expected rows
+
+  max |dx| (state)      = 9.277e-003   (tol 1.0e-002)
+  max |dP| (covariance) = 6.604e-005   (tol 1.0e-001)
+  worst track index     = 60
+
+  RESULT: PASS - core matches golden reference
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,264 @@
+//// ============================================================================
+////  main_tracker_net.c  -  Stage D1: tracker on hardware, air picture over UDP
+//// ----------------------------------------------------------------------------
+////  Same tracker loop as main_tracker.c, but each epoch it packs the quality
+////  tracks into an ap_frame_t and UDP-sends them to the GUI (gui.py).
+////
+////  This is a drop-in replacement for the lwIP Echo Server template's main.c:
+////  it keeps the standard network bring-up and replaces the echo logic with the
+////  tracker + air-picture sender. It relies on the template's platform.c /
+////  platform_config.h (init_platform, platform_enable_interrupts,
+////  PLATFORM_EMAC_BASEADDR) and an lwIP-enabled BSP.
+////
+////  App src/: main_tracker_net.c, airpicture_net.c, airpicture_net.h,
+////            airpicture.h, track_mgr.c/.h, sensor_models.c/.h, scenario3.h,
+////            + platform.c/platform_config.h (from the lwIP template)
+//// ============================================================================
+//#include <stdio.h>
+//#include <math.h>
+//#include "xparameters.h"
+//#include "xil_printf.h"
+//#include "xil_cache.h"
+//#include "sleep.h"
+//#include "xstatus.h"
+//#include "netif/xadapter.h"
+//#include "platform.h"
+//#include "platform_config.h"
+//#include "lwip/init.h"
+//#include "lwip/inet.h"
+//#include "xekf_batch.h"
+//#include "track_mgr.h"
+//#include "scenario3.h"           // the 100-target scenario (S2_* names)
+//#include "airpicture.h"
+//#include "airpicture_net.h"
+//
+//// ---- board network config (EDIT to match your LAN) -------------------------
+//#define BOARD_IP  "192.168.1.10"
+//#define NETMASK   "255.255.255.0"
+//#define GATEWAY   "192.168.1.1"
+//static unsigned char mac_ethernet_address[] = { 0x00,0x0a,0x35,0x00,0x01,0x02 };
+//struct netif server_netif;
+//
+//// ---- EKF IP + tracker state ------------------------------------------------
+//#define IP_WAVE 100
+//static float data_buf[TM_MAXTRK * TM_STRIDE] __attribute__((aligned(64)));
+//static int   nmeas_buf[TM_MAXTRK]            __attribute__((aligned(64)));
+//static int   slot2trk[TM_MAXTRK];
+//static TrackMgr TM;
+//static XEkf_batch Ekf;
+//static ap_frame_t frame;
+//
+//static int ekf_init(void) {
+//    XEkf_batch_Config *cfg = XEkf_batch_LookupConfig(XPAR_XEKF_BATCH_0_DEVICE_ID);
+//    if (!cfg || XEkf_batch_CfgInitialize(&Ekf, cfg) != XST_SUCCESS) {
+//        xil_printf("EKF driver init failed\r\n"); return XST_FAILURE;
+//    }
+//    return XST_SUCCESS;
+//}
+//static void run_ip(int ntrk) {
+//    if (ntrk <= 0) return;
+//    Xil_DCacheFlushRange((UINTPTR)data_buf,  sizeof(data_buf));
+//    Xil_DCacheFlushRange((UINTPTR)nmeas_buf, sizeof(nmeas_buf));
+//    for (int off = 0; off < ntrk; off += IP_WAVE) {
+//        int c = ntrk - off; if (c > IP_WAVE) c = IP_WAVE;
+//        XEkf_batch_Set_data(&Ekf,       (u64)(UINTPTR)&data_buf[off * TM_STRIDE]);
+//        XEkf_batch_Set_nmeas(&Ekf,      (u64)(UINTPTR)&nmeas_buf[off]);
+//        XEkf_batch_Set_num_tracks(&Ekf, (u32)c);
+//        XEkf_batch_Start(&Ekf);
+//        while (!XEkf_batch_IsDone(&Ekf)) { }
+//    }
+//    Xil_DCacheInvalidateRange((UINTPTR)data_buf, sizeof(data_buf));
+//}
+//
+//// pack the quality (displayed) tracks into the air-picture frame
+//static int build_frame(int epoch) {
+//    int n = 0;
+//    for (int i = 0; i < TM_MAXTRK && n < AP_MAXTRK; i++) {
+//        if (!tm_is_quality(&TM.t[i])) continue;
+//        ap_track_t *a = &frame.track[n++];
+//        a->id = (uint32_t)TM.t[i].id;
+//        a->x = TM.t[i].x[0]; a->y = TM.t[i].x[1]; a->z = TM.t[i].x[2];
+//        a->vx= TM.t[i].x[3]; a->vy= TM.t[i].x[4]; a->vz= TM.t[i].x[5];
+//        a->iff = IFF_UNKNOWN;              // IFF correlation not wired yet (Stage E)
+//        a->pos_sigma = sqrtf(TM.t[i].P[0] + TM.t[i].P[7] + TM.t[i].P[14]);
+//    }
+//    frame.magic = AP_MAGIC; frame.epoch = (uint32_t)epoch; frame.ntracks = (uint32_t)n;
+//    return n;
+//}
+//
+//int main(void) {
+//    init_platform();
+//
+//    ip_addr_t ipaddr, netmask, gw;
+//    inet_aton(BOARD_IP, &ipaddr); inet_aton(NETMASK, &netmask); inet_aton(GATEWAY, &gw);
+//
+//    lwip_init();
+//    if (!xemac_add(&server_netif, &ipaddr, &netmask, &gw,
+//                   mac_ethernet_address, PLATFORM_EMAC_BASEADDR)) {
+//        xil_printf("xemac_add failed\r\n"); return -1;
+//    }
+//    netif_set_default(&server_netif);
+//    platform_enable_interrupts();
+//    netif_set_up(&server_netif);
+//    ap_udp_init();
+//    xil_printf("network up: board %s\r\n", BOARD_IP);
+//
+//    if (ekf_init() != XST_SUCCESS) return -1;
+//
+//    // stream the scenario CONTINUOUSLY so the GUI always has live data
+//    while (1) {
+//        tm_init(&TM);                                 // fresh tracker each pass
+//        for (int e = 0; e < S2_NEPOCH; e++) {
+//            xemacif_input(&server_netif);             // service Ethernet each loop
+//            const float *rd=&s2_radar_det[e*S2_MAXDET*3]; int nr=s2_radar_ndet[e];
+//            const float *id=&s2_irst_det [e*S2_MAXDET*2]; int ni=s2_irst_ndet[e];
+//            const float *wd=&s2_rwr_det  [e*S2_MAXDET*2]; int nw=s2_rwr_ndet[e];
+//
+//            tm_begin_epoch(&TM);
+//            tm_associate(&TM, rd, nr, id, ni, wd, nw);
+//            int np = tm_build_batch(&TM, data_buf, nmeas_buf, slot2trk);
+//            run_ip(np);
+//            tm_finish_epoch(&TM, data_buf, slot2trk, np);
+//
+//            int n = build_frame(e);
+//            ap_send(&frame, n);
+//            if (e % 20 == 0) xil_printf("epoch %3d  sent %d tracks\r\n", e, n);
+//            usleep(100000);                           // ~10 Hz pacing
+//        }
+//    }
+//    cleanup_platform();
+//    return 0;
+//}
+// ============================================================================
+//  main_tracker_net.c  -  Stage D1: tracker on hardware, air picture over UDP
+// ----------------------------------------------------------------------------
+//  Same tracker loop as main_tracker.c, but each epoch it packs the quality
+//  tracks into an ap_frame_t and UDP-sends them to the GUI (gui.py).
+//
+//  This is a drop-in replacement for the lwIP Echo Server template's main.c:
+//  it keeps the standard network bring-up and replaces the echo logic with the
+//  tracker + air-picture sender. It relies on the template's platform.c /
+//  platform_config.h (init_platform, platform_enable_interrupts,
+//  PLATFORM_EMAC_BASEADDR) and an lwIP-enabled BSP.
+//
+//  App src/: main_tracker_net.c, airpicture_net.c, airpicture_net.h,
+//            airpicture.h, track_mgr.c/.h, sensor_models.c/.h, scenario3.h,
+//            + platform.c/platform_config.h (from the lwIP template)
+// ============================================================================
+#include <stdio.h>
+#include <math.h>
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "xil_cache.h"
+#include "sleep.h"
+#include "xstatus.h"
+#include "netif/xadapter.h"
+#include "platform.h"
+#include "platform_config.h"
+#include "lwip/init.h"
+#include "lwip/inet.h"
+#include "xekf_batch.h"
+#include "track_mgr.h"
+#include "scenario3.h"           // the 100-target scenario (S2_* names)
+#include "iff3.h"                // Stage E: IFF friend-reply stream (S3_IFF_*)
+#include "airpicture.h"
+#include "airpicture_net.h"
+
+// ---- board network config (EDIT to match your LAN) -------------------------
+#define BOARD_IP  "192.168.1.10"
+#define NETMASK   "255.255.255.0"
+#define GATEWAY   "192.168.1.1"
+static unsigned char mac_ethernet_address[] = { 0x00,0x0a,0x35,0x00,0x01,0x02 };
+struct netif server_netif;
+
+// ---- EKF IP + tracker state ------------------------------------------------
+#define IP_WAVE 100
+static float data_buf[TM_MAXTRK * TM_STRIDE] __attribute__((aligned(64)));
+static int   nmeas_buf[TM_MAXTRK]            __attribute__((aligned(64)));
+static int   slot2trk[TM_MAXTRK];
+static TrackMgr TM;
+static XEkf_batch Ekf;
+static ap_frame_t frame;
+
+static int ekf_init(void) {
+    XEkf_batch_Config *cfg = XEkf_batch_LookupConfig(XPAR_XEKF_BATCH_0_DEVICE_ID);
+    if (!cfg || XEkf_batch_CfgInitialize(&Ekf, cfg) != XST_SUCCESS) {
+        xil_printf("EKF driver init failed\r\n"); return XST_FAILURE;
+    }
+    return XST_SUCCESS;
+}
+static void run_ip(int ntrk) {
+    if (ntrk <= 0) return;
+    Xil_DCacheFlushRange((UINTPTR)data_buf,  sizeof(data_buf));
+    Xil_DCacheFlushRange((UINTPTR)nmeas_buf, sizeof(nmeas_buf));
+    for (int off = 0; off < ntrk; off += IP_WAVE) {
+        int c = ntrk - off; if (c > IP_WAVE) c = IP_WAVE;
+        XEkf_batch_Set_data(&Ekf,       (u64)(UINTPTR)&data_buf[off * TM_STRIDE]);
+        XEkf_batch_Set_nmeas(&Ekf,      (u64)(UINTPTR)&nmeas_buf[off]);
+        XEkf_batch_Set_num_tracks(&Ekf, (u32)c);
+        XEkf_batch_Start(&Ekf);
+        while (!XEkf_batch_IsDone(&Ekf)) { }
+    }
+    Xil_DCacheInvalidateRange((UINTPTR)data_buf, sizeof(data_buf));
+}
+
+// pack the quality (displayed) tracks into the air-picture frame
+static int build_frame(int epoch) {
+    int n = 0;
+    for (int i = 0; i < TM_MAXTRK && n < AP_MAXTRK; i++) {
+        if (!tm_is_quality(&TM.t[i])) continue;
+        ap_track_t *a = &frame.track[n++];
+        a->id = (uint32_t)TM.t[i].id;
+        a->x = TM.t[i].x[0]; a->y = TM.t[i].x[1]; a->z = TM.t[i].x[2];
+        a->vx= TM.t[i].x[3]; a->vy= TM.t[i].x[4]; a->vz= TM.t[i].x[5];
+        a->iff = (uint8_t)TM.t[i].iff;     // Stage E: FRIEND / HOSTILE / UNKNOWN
+        a->pos_sigma = sqrtf(TM.t[i].P[0] + TM.t[i].P[7] + TM.t[i].P[14]);
+    }
+    frame.magic = AP_MAGIC; frame.epoch = (uint32_t)epoch; frame.ntracks = (uint32_t)n;
+    return n;
+}
+
+int main(void) {
+    init_platform();
+
+    ip_addr_t ipaddr, netmask, gw;
+    inet_aton(BOARD_IP, &ipaddr); inet_aton(NETMASK, &netmask); inet_aton(GATEWAY, &gw);
+
+    lwip_init();
+    if (!xemac_add(&server_netif, &ipaddr, &netmask, &gw,
+                   mac_ethernet_address, PLATFORM_EMAC_BASEADDR)) {
+        xil_printf("xemac_add failed\r\n"); return -1;
+    }
+    netif_set_default(&server_netif);
+    platform_enable_interrupts();
+    netif_set_up(&server_netif);
+    ap_udp_init();
+    xil_printf("network up: board %s\r\n", BOARD_IP);
+
+    if (ekf_init() != XST_SUCCESS) return -1;
+
+    // stream the scenario CONTINUOUSLY so the GUI always has live data
+    while (1) {
+        tm_init(&TM);                                 // fresh tracker each pass
+        for (int e = 0; e < S2_NEPOCH; e++) {
+            xemacif_input(&server_netif);             // service Ethernet each loop
+            const float *rd=&s2_radar_det[e*S2_MAXDET*3]; int nr=s2_radar_ndet[e];
+            const float *id=&s2_irst_det [e*S2_MAXDET*2]; int ni=s2_irst_ndet[e];
+            const float *wd=&s2_rwr_det  [e*S2_MAXDET*2]; int nw=s2_rwr_ndet[e];
+
+            tm_begin_epoch(&TM);
+            tm_associate(&TM, rd, nr, id, ni, wd, nw);
+            int np = tm_build_batch(&TM, data_buf, nmeas_buf, slot2trk);
+            run_ip(np);
+            tm_finish_epoch(&TM, data_buf, slot2trk, np);
+            tm_iff_update(&TM, &s3_iff_det[e*S3_IFF_MAXDET*3], s3_iff_ndet[e]);  // Stage E
+
+            int n = build_frame(e);
+            ap_send(&frame, n);
+            if (e % 20 == 0) xil_printf("epoch %3d  sent %d tracks\r\n", e, n);
+            usleep(100000);                           // ~10 Hz pacing
+        }
+    }
+    cleanup_platform();
+    return 0;
+}

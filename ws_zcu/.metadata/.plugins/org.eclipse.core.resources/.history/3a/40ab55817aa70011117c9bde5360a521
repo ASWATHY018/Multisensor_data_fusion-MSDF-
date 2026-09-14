@@ -1,0 +1,64 @@
+// ============================================================================
+//  track_mgr.h  -  multi-target track management (Stage C)
+// ----------------------------------------------------------------------------
+//  Turns a pile of per-sensor detections (with clutter, misses, births/deaths)
+//  into a maintained list of tracks. Sits on top of the verified EKF core:
+//    per epoch -> predict+gate+associate (PS) -> EKF update (PL) -> birth/M-of-N/death
+//
+//  Pipeline per epoch:
+//    tm_begin_epoch()   predict every track (for gating), clear per-epoch state
+//    tm_associate()     gate + nearest-neighbour assign detections; birth from
+//                       unassociated radar returns
+//    tm_build_batch()   pack active tracks (+ their assigned rows) for the PL
+//    <run EKF IP>
+//    tm_finish_epoch()  read posteriors back; hits/misses; confirm/coast/delete
+// ============================================================================
+#ifndef TRACK_MGR_H
+#define TRACK_MGR_H
+
+#include "sensor_models.h"
+
+#define TM_MAXTRK   160               // room for 100 targets + tentatives + clutter
+#define TM_MAXROWS  7                     // radar3+IRST2+RWR2 per track/epoch
+#define TM_STRIDE   SM_STRIDE             // 98
+
+// track status
+#define TM_FREE      0
+#define TM_TENTATIVE 1
+#define TM_CONFIRMED 2
+
+// management thresholds
+#define TM_CONFIRM_HITS   3               // tentative -> confirmed
+#define TM_DEL_TENT_MISS  2               // drop unconfirmed track after N misses
+#define TM_DEL_CONF_MISS  8               // drop confirmed track after N misses
+
+typedef struct {
+    int   status;
+    int   id;
+    float x[6], P[36];                    // prior (becomes posterior after EKF)
+    float xp[6], Pp[36];                  // predicted (this epoch, for gating)
+    int   hits, misses, age;
+    unsigned hist;                        // RADAR hit history bitmask (for M-of-N)
+    int   associated;                     // got >=1 detection (any sensor) this epoch?
+    int   assoc_radar;                    // got a RADAR (range) detection this epoch?
+    float rows[TM_MAXROWS * 8];           // scalar (H[6],y,r) rows this epoch
+    int   nrows;
+} Track;
+
+typedef struct {
+    Track t[TM_MAXTRK];
+    int   next_id;
+} TrackMgr;
+
+void tm_init(TrackMgr *tm);
+void tm_begin_epoch(TrackMgr *tm);
+// detections: flat arrays, det i is &det[i*dim]; dim = 3 radar, 2 irst/rwr
+void tm_associate(TrackMgr *tm,
+                  const float *radar_det, int nr,
+                  const float *irst_det,  int ni,
+                  const float *rwr_det,   int nw);
+int  tm_build_batch(TrackMgr *tm, float *data_buf, int *nmeas, int *slot2trk);
+void tm_finish_epoch(TrackMgr *tm, const float *data_buf, const int *slot2trk, int npack);
+int  tm_count(const TrackMgr *tm, int status);
+
+#endif // TRACK_MGR_H

@@ -1,0 +1,1062 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ekf_core.cpp, Line: 54, Column: 2 }
+Function:        _ZL7predictPfPA6_f
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'build_FQ(float (*) [6], float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 37, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'predict(float*, float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 49, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ekf_core.cpp, Line: 72, Column: 5 }
+Function:        _ZL7predictPfPA6_f
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'matmul(float const (*) [6], float const (*) [6], float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 15, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'predict(float*, float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 49, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ekf_core.cpp, Line: 71, Column: 5 }
+Function:        _ZL7predictPfPA6_f
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'transpose(float const (*) [6], float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 28, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'predict(float*, float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 49, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ekf_core.cpp, Line: 70, Column: 2 }
+Function:        _ZL7predictPfPA6_f
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'matmul(float const (*) [6], float const (*) [6], float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 15, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'predict(float*, float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 49, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ekf_core.cpp, Line: 114, Column: 5 }
+Function:        _ZL13update_scalarPfPA6_fPKfff
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'matmul(float const (*) [6], float const (*) [6], float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 15, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'update_scalar(float*, float (*) [6], float const*, float, float)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 85, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ekf_core.cpp, Line: 116, Column: 5 }
+Function:        _ZL13update_scalarPfPA6_fPKfff
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'matmul(float const (*) [6], float const (*) [6], float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 15, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'update_scalar(float*, float (*) [6], float const*, float, float)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 85, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ekf_core.cpp, Line: 115, Column: 5 }
+Function:        _ZL13update_scalarPfPA6_fPKfff
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'transpose(float const (*) [6], float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 28, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'update_scalar(float*, float (*) [6], float const*, float, float)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 85, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ekf_core.cpp, Line: 162, Column: 13 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'predict(float*, float (*) [6])'
+    DebugLoc:        { File: ekf_core.cpp, Line: 49, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ekf_core.cpp, Line: 169, Column: 17 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'update_scalar(float*, float (*) [6], float const*, float, float)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 85, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 61, Column: 26 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_61_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 21, Column: 30 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_21_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 21, Column: 30 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_21_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 92, Column: 26 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_92_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 21, Column: 30 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_21_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 21, Column: 30 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_21_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_139_2
+  - String:          ''' ('
+  - LoopLoc:         'ekf_core.cpp:139:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ekf_batch
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_2
+  - String:          ''' ('
+  - LoopLoc:         'ekf_core.cpp:92:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ekf_batch
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_110_7
+  - String:          ''' ('
+  - LoopLoc:         'ekf_core.cpp:110:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ekf_batch
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_21_3
+  - String:          ''' ('
+  - LoopLoc:         'ekf_core.cpp:21:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ekf_batch
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_31_2
+  - String:          ''' ('
+  - LoopLoc:         'ekf_core.cpp:31:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ekf_batch
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_21_3
+  - String:          ''' ('
+  - LoopLoc:         'ekf_core.cpp:21:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ekf_batch
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_21_3
+  - String:          ''' ('
+  - LoopLoc:         'ekf_core.cpp:21:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ekf_batch
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_31_2
+  - String:          ''' ('
+  - LoopLoc:         'ekf_core.cpp:31:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ekf_batch
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_21_3
+  - String:          ''' ('
+  - LoopLoc:         'ekf_core.cpp:21:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ekf_batch
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_61_2
+  - String:          ''' ('
+  - LoopLoc:         'ekf_core.cpp:61:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ekf_batch
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 87, Column: 9 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          Ph.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 98, Column: 12 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          K.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 104, Column: 12 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          A.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 104, Column: 21 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          AP.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 104, Column: 31 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          At.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 104, Column: 41 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          APAt.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 51, Column: 9 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          F.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 51, Column: 18 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          Q.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 56, Column: 12 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          xp.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 66, Column: 12 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          FP.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 66, Column: 22 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          Ft.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 66, Column: 32 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          FPFt.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 146, Column: 20 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          local
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 154, Column: 20 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          x
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 154, Column: 26 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          P
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ekf_core.cpp, Line: 166, Column: 24 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          H
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ekf_core.cpp, Line: 148, Column: 20 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '98'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       data
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_3
+  - String:          ' '
+  - LoopLoc:         'ekf_core.cpp:148:20'
+  - String:          ' '
+  - Function:        'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ekf_core.cpp, Line: 150, Column: 13 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.15
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ekf_core.cpp, Line: 176, Column: 32 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '98'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep6320seq
+  - ArrayName:       data
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_176_12
+  - String:          ' '
+  - LoopLoc:         'ekf_core.cpp:176:32'
+  - String:          ' '
+  - Function:        'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ekf_core.cpp, Line: 178, Column: 17 }
+  - OrigDirection:   write
+  - OrigID:          for.inc136.store.24
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ekf_core.cpp, Line: 138, Column: 20 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        nmeas6321seq
+  - ArrayName:       nmeas
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_138_1
+  - String:          ' '
+  - LoopLoc:         'ekf_core.cpp:138:20'
+  - String:          ' '
+  - Function:        'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ekf_core.cpp, Line: 163, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          _ZL7predictPfPA6_f.exit.load.109
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: ekf_core.cpp, Line: 148, Column: 20 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: ekf_core.cpp, Line: 178, Column: 17 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ekf_core.cpp, Line: 148, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       data
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: ekf_core.cpp, Line: 176, Column: 32 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: ekf_core.cpp, Line: 150, Column: 13 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ekf_core.cpp, Line: 176, Column: 32 }
+  - OrigDirection:   write
+  - OrigID:          scevgep6320seq
+  - ArrayName:       data
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ekf_core.cpp, Line: 176, Column: 32 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ekf_core.cpp, Line: 176, Column: 32 }
+  - OrigDirection:   write
+  - OrigID:          scevgep6320seq
+  - ArrayName:       data
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_176_12
+  - String:          ' '
+  - LoopLoc:         'ekf_core.cpp:176:32'
+  - String:          ' '
+  - Function:        'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ekf_core.cpp, Line: 138, Column: 20 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ekf_core.cpp, Line: 138, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          nmeas6321seq
+  - ArrayName:       nmeas
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_138_1
+  - String:          ' '
+  - LoopLoc:         'ekf_core.cpp:138:20'
+  - String:          ' '
+  - Function:        'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ekf_core.cpp, Line: 148, Column: 20 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ekf_core.cpp, Line: 148, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       data
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_3
+  - String:          ' '
+  - LoopLoc:         'ekf_core.cpp:148:20'
+  - String:          ' '
+  - Function:        'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ekf_core.cpp, Line: 138, Column: 20 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_138_1
+  - String:          ' '
+  - LoopLoc:         'ekf_core.cpp:138:20'
+  - String:          ' '
+  - Function:        'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ekf_core.cpp, Line: 138, Column: 20 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_138_1
+  - String:          '''('
+  - LoopLoc:         'ekf_core.cpp:138:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ekf_core.cpp, Line: 148, Column: 20 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '98'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_148_3
+  - String:          ' '
+  - LoopLoc:         'ekf_core.cpp:148:20'
+  - String:          ' '
+  - Function:        'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ekf_core.cpp, Line: 148, Column: 20 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '98'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_148_3
+  - String:          '''('
+  - LoopLoc:         'ekf_core.cpp:148:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ekf_core.cpp, Line: 176, Column: 32 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '98'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_176_12
+  - String:          ' '
+  - LoopLoc:         'ekf_core.cpp:176:32'
+  - String:          ' '
+  - Function:        'ekf_batch(float*, int const*, int)'
+    DebugLoc:        { File: ekf_core.cpp, Line: 128, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ekf_core.cpp, Line: 176, Column: 32 }
+Function:        _Z9ekf_batchPfPKii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '98'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_176_12
+  - String:          '''('
+  - LoopLoc:         'ekf_core.cpp:176:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

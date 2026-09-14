@@ -1,0 +1,91 @@
+// ============================================================================
+//  platform.c  -  lwIP network bring-up for ZCU102 (psu_cortexa53_0)
+// ----------------------------------------------------------------------------
+//  Sets up:
+//    * the GIC (XScuGic) as the ARM IRQ controller, and hands it to lwIP's
+//      Ethernet adapter (lwip213 connects the GEM interrupt itself, low-level);
+//    * a TTC (Triple Timer Counter) firing at 4 Hz to drive lwIP's periodic
+//      timers (ARP/TCP). Even a UDP-only app needs this tick for ARP to
+//      resolve the GUI's MAC reliably.
+//
+//  If a macro below is "undefined" at compile time, that names the fix:
+//    XPAR_XTTCPS_0_*      -> TTC0 not enabled in your platform; enable TTC0 in
+//                            the PS (Vivado) or point these at an enabled TTC.
+//    XPAR_SCUGIC_SINGLE_DEVICE_ID -> use the GIC id your xparameters.h defines.
+// ============================================================================
+#include "xparameters.h"
+#include "netif/xadapter.h"
+#include "platform.h"
+#include "platform_config.h"
+#include "xil_printf.h"
+#include "xil_cache.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+#include "xttcps.h"
+
+#define PLATFORM_TIMER_INTR_RATE_HZ  4
+
+// lwIP TCP timer flags (referenced by the lwip port; harmless for UDP)
+volatile int TcpFastTmrFlag = 0;
+volatile int TcpSlowTmrFlag = 0;
+
+static XScuGic  IntcInstance;
+static XTtcPs   TtcInstance;
+
+#define INTC_DEVICE_ID    XPAR_SCUGIC_0_DEVICE_ID
+#define TTC_DEVICE_ID     XPAR_XTTCPS_0_DEVICE_ID
+#define TTC_INTR_ID       68U   /* ZynqMP TTC0 timer-1 GIC SPI id (no XPAR macro in this BSP) */
+
+// TTC interval interrupt -> raise the lwIP fast/slow timer flags
+static void timer_callback(void *cb) {
+    XTtcPs *ttc = (XTtcPs *)cb;
+    u32 status = XTtcPs_GetInterruptStatus(ttc);
+    XTtcPs_ClearInterruptStatus(ttc, status);
+    static int toggle = 0;
+    TcpFastTmrFlag = 1;
+    toggle = !toggle;
+    if (toggle) TcpSlowTmrFlag = 1;
+}
+
+static void setup_ttc(void) {
+    XTtcPs_Config *cfg = XTtcPs_LookupConfig(TTC_DEVICE_ID);
+    XTtcPs_CfgInitialize(&TtcInstance, cfg, cfg->BaseAddress);
+    XTtcPs_SetOptions(&TtcInstance,
+                      XTTCPS_OPTION_INTERVAL_MODE | XTTCPS_OPTION_WAVE_DISABLE);
+    XInterval interval; u8 prescaler;
+    XTtcPs_CalcIntervalFromFreq(&TtcInstance, PLATFORM_TIMER_INTR_RATE_HZ,
+                                &interval, &prescaler);
+    XTtcPs_SetInterval(&TtcInstance, interval);
+    XTtcPs_SetPrescaler(&TtcInstance, prescaler);
+}
+
+static void setup_interrupts(void) {
+    XScuGic_Config *cfg = XScuGic_LookupConfig(INTC_DEVICE_ID);
+    XScuGic_CfgInitialize(&IntcInstance, cfg, cfg->CpuBaseAddress);
+    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT,
+        (Xil_ExceptionHandler)XScuGic_InterruptHandler, &IntcInstance);
+
+    // TTC tick interrupt
+    XScuGic_Connect(&IntcInstance, TTC_INTR_ID,
+        (Xil_ExceptionHandler)timer_callback, &TtcInstance);
+    XScuGic_Enable(&IntcInstance, TTC_INTR_ID);
+    XTtcPs_EnableInterrupts(&TtcInstance, XTTCPS_IXR_INTERVAL_MASK);
+    XTtcPs_Start(&TtcInstance);
+
+    // lwip213 connects the GEM (Ethernet) interrupt itself via XScuGic_RegisterHandler;
+    // the platform only provides the initialised GIC + IRQ exception handler above.
+}
+
+void init_platform(void) {
+    setup_ttc();
+    setup_interrupts();
+}
+
+void platform_enable_interrupts(void) {
+    Xil_ExceptionEnable();
+}
+
+void cleanup_platform(void) {
+    Xil_DCacheDisable();
+    Xil_ICacheDisable();
+}

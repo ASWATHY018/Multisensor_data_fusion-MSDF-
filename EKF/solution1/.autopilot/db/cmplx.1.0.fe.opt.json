@@ -1,0 +1,91 @@
+{
+  "0": {
+    "basicblocks": 80,
+    "calls": "1 5",
+    "file": "ekf_core.cpp",
+    "fileloc": 128,
+    "instructions": 230,
+    "loads": {
+      "L": 8,
+      "T": 2
+    },
+    "name": "ekf_batch",
+    "stores": {
+      "L": 6,
+      "T": 1
+    },
+    "total_instructions": 962
+  },
+  "1": {
+    "basicblocks": 43,
+    "calls": "3 2 4 2",
+    "file": "ekf_core.cpp",
+    "fileloc": 49,
+    "instructions": 172,
+    "loads": {
+      "L": 7
+    },
+    "name": "predict",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 367
+  },
+  "2": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "ekf_core.cpp",
+    "fileloc": 15,
+    "instructions": 46,
+    "loads": {
+      "L": 2
+    },
+    "name": "matmul",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 46
+  },
+  "3": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "ekf_core.cpp",
+    "fileloc": 37,
+    "instructions": 74,
+    "name": "build_FQ",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 74
+  },
+  "4": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "ekf_core.cpp",
+    "fileloc": 28,
+    "instructions": 29,
+    "loads": {
+      "L": 1
+    },
+    "name": "transpose",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 29
+  },
+  "5": {
+    "basicblocks": 67,
+    "calls": "2 4 2",
+    "file": "ekf_core.cpp",
+    "fileloc": 84,
+    "instructions": 244,
+    "loads": {
+      "L": 14
+    },
+    "name": "update_scalar",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 365
+  }
+}

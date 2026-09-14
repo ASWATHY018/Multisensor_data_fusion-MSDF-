@@ -1,0 +1,222 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matmul" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="transpose" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="transpose" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="build_FQ" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:50:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="predict" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:52:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=F complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:53:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=Q complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:57:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=xp complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:59:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:67:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=FP complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:68:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=Ft complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:69:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="predict" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=FPFt complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:77:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="predict" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:86:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="update_scalar" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="update_scalar" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=Ph complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:90:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="update_scalar" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:99:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="update_scalar" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=K complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:105:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="update_scalar" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=A complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:106:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="update_scalar" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=AP complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:107:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="update_scalar" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=At complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:108:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="update_scalar" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=APAt complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:111:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="update_scalar" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:121:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="update_scalar" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/MSDF_2_ZCU/EKF/solution1/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=ekf_batch" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:129:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=data offset=slave bundle=gmem0 depth=9800" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:130:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=nmeas offset=slave bundle=gmem1 depth=100" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:131:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=data bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:132:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=nmeas bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:133:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=num_tracks bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:134:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:140:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:147:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local cyclic factor=8" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:149:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:155:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=x complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:156:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=P complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:167:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=H complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ekf_core.cpp:177:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ekf_batch" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="ekf_core.cpp:54:2" msg_body="Inlining function 'build_FQ(float (*) [6], float (*) [6])' into 'predict(float*, float (*) [6])'">
+        <args Callee="build_FQ(float (*) [6], float (*) [6])" Callee-DebugLoc="File ekf_core.cpp Line 37 Column 0" Caller="predict(float*, float (*) [6])" Caller-DebugLoc="File ekf_core.cpp Line 49 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="ekf_core.cpp:72:5" msg_body="Inlining function 'matmul(float const (*) [6], float const (*) [6], float (*) [6])' into 'predict(float*, float (*) [6])'">
+        <args Callee="matmul(float const (*) [6], float const (*) [6], float (*) [6])" Callee-DebugLoc="File ekf_core.cpp Line 15 Column 0" Caller="predict(float*, float (*) [6])" Caller-DebugLoc="File ekf_core.cpp Line 49 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="ekf_core.cpp:71:5" msg_body="Inlining function 'transpose(float const (*) [6], float (*) [6])' into 'predict(float*, float (*) [6])'">
+        <args Callee="transpose(float const (*) [6], float (*) [6])" Callee-DebugLoc="File ekf_core.cpp Line 28 Column 0" Caller="predict(float*, float (*) [6])" Caller-DebugLoc="File ekf_core.cpp Line 49 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="ekf_core.cpp:70:2" msg_body="Inlining function 'matmul(float const (*) [6], float const (*) [6], float (*) [6])' into 'predict(float*, float (*) [6])'">
+        <args Callee="matmul(float const (*) [6], float const (*) [6], float (*) [6])" Callee-DebugLoc="File ekf_core.cpp Line 15 Column 0" Caller="predict(float*, float (*) [6])" Caller-DebugLoc="File ekf_core.cpp Line 49 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="ekf_core.cpp:114:5" msg_body="Inlining function 'matmul(float const (*) [6], float const (*) [6], float (*) [6])' into 'update_scalar(float*, float (*) [6], float const*, float, float)'">
+        <args Callee="matmul(float const (*) [6], float const (*) [6], float (*) [6])" Callee-DebugLoc="File ekf_core.cpp Line 15 Column 0" Caller="update_scalar(float*, float (*) [6], float const*, float, float)" Caller-DebugLoc="File ekf_core.cpp Line 85 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="ekf_core.cpp:116:5" msg_body="Inlining function 'matmul(float const (*) [6], float const (*) [6], float (*) [6])' into 'update_scalar(float*, float (*) [6], float const*, float, float)'">
+        <args Callee="matmul(float const (*) [6], float const (*) [6], float (*) [6])" Callee-DebugLoc="File ekf_core.cpp Line 15 Column 0" Caller="update_scalar(float*, float (*) [6], float const*, float, float)" Caller-DebugLoc="File ekf_core.cpp Line 85 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="ekf_core.cpp:115:5" msg_body="Inlining function 'transpose(float const (*) [6], float (*) [6])' into 'update_scalar(float*, float (*) [6], float const*, float, float)'">
+        <args Callee="transpose(float const (*) [6], float (*) [6])" Callee-DebugLoc="File ekf_core.cpp Line 28 Column 0" Caller="update_scalar(float*, float (*) [6], float const*, float, float)" Caller-DebugLoc="File ekf_core.cpp Line 85 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="ekf_core.cpp:162:13" msg_body="Inlining function 'predict(float*, float (*) [6])' into 'ekf_batch(float*, int const*, int)'">
+        <args Callee="predict(float*, float (*) [6])" Callee-DebugLoc="File ekf_core.cpp Line 49 Column 0" Caller="ekf_batch(float*, int const*, int)" Caller-DebugLoc="File ekf_core.cpp Line 128 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="ekf_core.cpp:169:17" msg_body="Inlining function 'update_scalar(float*, float (*) [6], float const*, float, float)' into 'ekf_batch(float*, int const*, int)'">
+        <args Callee="update_scalar(float*, float (*) [6], float const*, float, float)" Callee-DebugLoc="File ekf_core.cpp Line 85 Column 0" Caller="ekf_batch(float*, int const*, int)" Caller-DebugLoc="File ekf_core.cpp Line 128 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="ekf_core.cpp:61:26" msg_body="Loop 'VITIS_LOOP_61_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_61_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="ekf_core.cpp:21:30" msg_body="Loop 'VITIS_LOOP_21_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_21_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="ekf_core.cpp:92:26" msg_body="Loop 'VITIS_LOOP_92_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_92_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="ekf_core.cpp:128:0" msg_body="Unrolling loop 'VITIS_LOOP_139_2' (ekf_core.cpp:139:27) in function 'ekf_batch' completely with a factor of 1">
+        <args Factor="1" LoopLoc="ekf_core.cpp:139:27" LoopName="VITIS_LOOP_139_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="ekf_core.cpp:128:0" msg_body="Unrolling loop 'VITIS_LOOP_92_2' (ekf_core.cpp:92:26) in function 'ekf_batch' completely with a factor of 6">
+        <args Factor="6" LoopLoc="ekf_core.cpp:92:26" LoopName="VITIS_LOOP_92_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="ekf_core.cpp:128:0" msg_body="Unrolling loop 'VITIS_LOOP_110_7' (ekf_core.cpp:110:27) in function 'ekf_batch' completely with a factor of 6">
+        <args Factor="6" LoopLoc="ekf_core.cpp:110:27" LoopName="VITIS_LOOP_110_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="ekf_core.cpp:128:0" msg_body="Unrolling loop 'VITIS_LOOP_21_3' (ekf_core.cpp:21:30) in function 'ekf_batch' completely with a factor of 6">
+        <args Factor="6" LoopLoc="ekf_core.cpp:21:30" LoopName="VITIS_LOOP_21_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="ekf_core.cpp:128:0" msg_body="Unrolling loop 'VITIS_LOOP_31_2' (ekf_core.cpp:31:26) in function 'ekf_batch' completely with a factor of 6">
+        <args Factor="6" LoopLoc="ekf_core.cpp:31:26" LoopName="VITIS_LOOP_31_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="ekf_core.cpp:128:0" msg_body="Unrolling loop 'VITIS_LOOP_61_2' (ekf_core.cpp:61:26) in function 'ekf_batch' completely with a factor of 6">
+        <args Factor="6" LoopLoc="ekf_core.cpp:61:26" LoopName="VITIS_LOOP_61_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:87:9" msg_body="Applying array_partition to 'Ph.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="Ph.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:98:12" msg_body="Applying array_partition to 'K.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="K.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:104:12" msg_body="Applying array_partition to 'A.i': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="A.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:104:21" msg_body="Applying array_partition to 'AP.i': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="AP.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:104:31" msg_body="Applying array_partition to 'At.i': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="At.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:104:41" msg_body="Applying array_partition to 'APAt.i': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="APAt.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:51:9" msg_body="Applying array_partition to 'F.i': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="F.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:51:18" msg_body="Applying array_partition to 'Q.i': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="Q.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:56:12" msg_body="Applying array_partition to 'xp.i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="xp.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:66:12" msg_body="Applying array_partition to 'FP.i': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="FP.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:66:22" msg_body="Applying array_partition to 'Ft.i': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="Ft.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:66:32" msg_body="Applying array_partition to 'FPFt.i': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="FPFt.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:146:20" msg_body="Applying array_partition to 'local': Cyclic partitioning with factor 8 on dimension 1.">
+        <args Dim="1" Factor="8" Mode="Cyclic" UOName="local"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:154:20" msg_body="Applying array_partition to 'x': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="x"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:154:26" msg_body="Applying array_partition to 'P': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="P"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ekf_core.cpp:166:24" msg_body="Applying array_partition to 'H': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="H"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

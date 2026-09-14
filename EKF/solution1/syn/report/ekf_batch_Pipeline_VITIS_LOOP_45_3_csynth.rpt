@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vitis HLS Report for 'ekf_batch_Pipeline_VITIS_LOOP_45_3'
+================================================================
+* Date:           Thu Sep  3 12:11:35 2026
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        EKF
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  0.975 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        5|        5|  50.000 ns|  50.000 ns|    5|    5|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_45_3  |        3|        3|         1|          1|          1|     3|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      20|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     135|    -|
+|Register         |        -|     -|     160|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     160|     155|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln45_fu_268_p2   |         +|   0|  0|   9|           2|           1|
+    |ap_condition_94      |       and|   0|  0|   2|           1|           1|
+    |icmp_ln45_fu_262_p2  |      icmp|   0|  0|   9|           2|           2|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  20|           5|           4|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |Q_10_fu_102         |   9|          2|   17|         34|
+    |Q_11_fu_106         |   9|          2|    2|          4|
+    |Q_1_fu_66           |   9|          2|   17|         34|
+    |Q_2_fu_70           |   9|          2|   16|         32|
+    |Q_3_fu_74           |   9|          2|   17|         34|
+    |Q_4_fu_78           |   9|          2|   16|         32|
+    |Q_5_fu_82           |   9|          2|   17|         34|
+    |Q_6_fu_86           |   9|          2|   17|         34|
+    |Q_7_fu_90           |   9|          2|    2|          4|
+    |Q_8_fu_94           |   9|          2|   17|         34|
+    |Q_9_fu_98           |   9|          2|    2|          4|
+    |Q_fu_62             |   9|          2|   16|         32|
+    |ap_done_int         |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i  |   9|          2|    2|          4|
+    |i_4_fu_58           |   9|          2|    2|          4|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               | 135|         30|  161|        322|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+----+----+-----+-----------+
+    |     Name    | FF | LUT| Bits| Const Bits|
+    +-------------+----+----+-----+-----------+
+    |Q_10_fu_102  |  17|   0|   32|         15|
+    |Q_11_fu_106  |   2|   0|   32|         30|
+    |Q_1_fu_66    |  17|   0|   32|         15|
+    |Q_2_fu_70    |  16|   0|   32|         16|
+    |Q_3_fu_74    |  17|   0|   32|         15|
+    |Q_4_fu_78    |  16|   0|   32|         16|
+    |Q_5_fu_82    |  17|   0|   32|         15|
+    |Q_6_fu_86    |  17|   0|   32|         15|
+    |Q_7_fu_90    |   2|   0|   32|         30|
+    |Q_8_fu_94    |  17|   0|   32|         15|
+    |Q_9_fu_98    |   2|   0|   32|         30|
+    |Q_fu_62      |  16|   0|   32|         16|
+    |ap_CS_fsm    |   1|   0|    1|          0|
+    |ap_done_reg  |   1|   0|    1|          0|
+    |i_4_fu_58    |   2|   0|    2|          0|
+    +-------------+----+----+-----+-----------+
+    |Total        | 160|   0|  388|        228|
+    +-------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+------------------------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++-----------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk           |   in|    1|  ap_ctrl_hs|  ekf_batch_Pipeline_VITIS_LOOP_45_3|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|  ekf_batch_Pipeline_VITIS_LOOP_45_3|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|  ekf_batch_Pipeline_VITIS_LOOP_45_3|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|  ekf_batch_Pipeline_VITIS_LOOP_45_3|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|  ekf_batch_Pipeline_VITIS_LOOP_45_3|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|  ekf_batch_Pipeline_VITIS_LOOP_45_3|  return value|
+|Q_11_out         |  out|   32|      ap_vld|                            Q_11_out|       pointer|
+|Q_11_out_ap_vld  |  out|    1|      ap_vld|                            Q_11_out|       pointer|
+|Q_10_out         |  out|   32|      ap_vld|                            Q_10_out|       pointer|
+|Q_10_out_ap_vld  |  out|    1|      ap_vld|                            Q_10_out|       pointer|
+|Q_9_out          |  out|   32|      ap_vld|                             Q_9_out|       pointer|
+|Q_9_out_ap_vld   |  out|    1|      ap_vld|                             Q_9_out|       pointer|
+|Q_8_out          |  out|   32|      ap_vld|                             Q_8_out|       pointer|
+|Q_8_out_ap_vld   |  out|    1|      ap_vld|                             Q_8_out|       pointer|
+|Q_7_out          |  out|   32|      ap_vld|                             Q_7_out|       pointer|
+|Q_7_out_ap_vld   |  out|    1|      ap_vld|                             Q_7_out|       pointer|
+|Q_6_out          |  out|   32|      ap_vld|                             Q_6_out|       pointer|
+|Q_6_out_ap_vld   |  out|    1|      ap_vld|                             Q_6_out|       pointer|
+|Q_5_out          |  out|   32|      ap_vld|                             Q_5_out|       pointer|
+|Q_5_out_ap_vld   |  out|    1|      ap_vld|                             Q_5_out|       pointer|
+|Q_4_out          |  out|   32|      ap_vld|                             Q_4_out|       pointer|
+|Q_4_out_ap_vld   |  out|    1|      ap_vld|                             Q_4_out|       pointer|
+|Q_3_out          |  out|   32|      ap_vld|                             Q_3_out|       pointer|
+|Q_3_out_ap_vld   |  out|    1|      ap_vld|                             Q_3_out|       pointer|
+|Q_2_out          |  out|   32|      ap_vld|                             Q_2_out|       pointer|
+|Q_2_out_ap_vld   |  out|    1|      ap_vld|                             Q_2_out|       pointer|
+|Q_1_out          |  out|   32|      ap_vld|                             Q_1_out|       pointer|
+|Q_1_out_ap_vld   |  out|    1|      ap_vld|                             Q_1_out|       pointer|
+|Q_out            |  out|   32|      ap_vld|                               Q_out|       pointer|
+|Q_out_ap_vld     |  out|    1|      ap_vld|                               Q_out|       pointer|
++-----------------+-----+-----+------------+------------------------------------+--------------+
+

@@ -1,0 +1,96 @@
+12:57:47 **** Build of configuration Debug for project ekf_smoke_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 55309 D:/MSDF_2_ZCU/ws_zcu/ekf/export/ekf/ekf.xpfm standalone_domain D:/MSDF_2_ZCU/ws_zcu/ekf_smoke_system/Debug/system.bif
+sdcard_gen --xpfm D:/MSDF_2_ZCU/ws_zcu/ekf/export/ekf/ekf.xpfm --sys_config ekf --bif D:/MSDF_2_ZCU/ws_zcu/ekf_smoke_system/Debug/system.bif --bitstream D:/MSDF_2_ZCU/ws_zcu/ekf_smoke/_ide/bitstream/design_1_wrapper.bit --elf D:/MSDF_2_ZCU/ws_zcu/ekf_smoke/Debug/ekf_smoke.elf,psu_cortexa53_0
+creating BOOT.BIN using D:/MSDF_2_ZCU/ws_zcu/ekf_smoke/_ide/bitstream/design_1_wrapper.bit
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Fatal: program compiled against libxml 2 using libxml 20
+Running C:/Xilinx/Vitis/2023.1/bin/bootgen -arch zynqmp -image D:/MSDF_2_ZCU/ws_zcu/ekf_smoke_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+12:57:51 Build Finished (took 3s.724ms)
+

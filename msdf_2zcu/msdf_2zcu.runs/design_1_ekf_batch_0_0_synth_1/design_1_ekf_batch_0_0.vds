@@ -1,0 +1,1019 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Sep  3 12:42:50 2026
+# Process ID: 30332
+# Current directory: D:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.runs/design_1_ekf_batch_0_0_synth_1
+# Command line: vivado.exe -log design_1_ekf_batch_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_ekf_batch_0_0.tcl
+# Log file: D:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.runs/design_1_ekf_batch_0_0_synth_1/design_1_ekf_batch_0_0.vds
+# Journal file: D:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.runs/design_1_ekf_batch_0_0_synth_1\vivado.jou
+# Running On: Aswathy, OS: Windows, CPU Frequency: 3418 MHz, CPU Physical cores: 20, Host memory: 68475 MB
+#-----------------------------------------------------------
+source design_1_ekf_batch_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/MSDF_2_ZCU/export'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ekf_batch_0_0
+Command: synth_design -top design_1_ekf_batch_0_0 -part xczu9eg-ffvb1156-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu9eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu9eg'
+INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 30928
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3302.387 ; gain = 348.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_ekf_batch_0_0' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ip/design_1_ekf_batch_0_0/synth/design_1_ekf_batch_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_local_RAM_AUTO_1R1W' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_local_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_local_RAM_AUTO_1R1W' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_local_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_148_3' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_148_3.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_flow_control_loop_pipe_sequential_init' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_flow_control_loop_pipe_sequential_init' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_148_3' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_148_3.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_45_3' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_45_3.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_45_3' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_45_3.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_157_4' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_157_4.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_mux_6_3_32_1_1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_mux_6_3_32_1_1.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_mux_6_3_32_1_1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_mux_6_3_32_1_1.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_157_4' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_157_4.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_mux_8_3_32_1_1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_mux_8_3_32_1_1.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_mux_8_3_32_1_1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_mux_8_3_32_1_1.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_30_1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_30_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_30_1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_30_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1_ip' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/ip/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:79430]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:79430]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1_ip' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/ip/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1_ip' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/ip/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1_ip' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/ip/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_64_3' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_64_3.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_64_3' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_64_3.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_168_8' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_168_8.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_168_8' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_168_8.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_173_9' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_173_9.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_173_9' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_173_9.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_89_1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_89_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_89_1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_89_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_96_3' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_96_3.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_96_3' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_96_3.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_101_4' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_101_4.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_101_4' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_101_4.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_102_5' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_102_5.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_102_5' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_102_5.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_109_6' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_109_6.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_109_6' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_109_6.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_22' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_22.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_22' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_22.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_30_13' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_30_13.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_30_13' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_30_13.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_24' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_24.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_24' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_24.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_117_8' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_117_8.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_117_8' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_117_8.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_176_12' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_176_12.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_176_12' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_176_12.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_control_s_axi' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_control_s_axi.v:9]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_control_s_axi.v:222]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_control_s_axi' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_control_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_store' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:796]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_fifo' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_srl' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_srl' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_fifo' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized0' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_mem' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2700]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_mem' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2700]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized0' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_srl__parameterized0' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_srl__parameterized0' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized2' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_srl__parameterized1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_srl__parameterized1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized2' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_store' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:796]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_load' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:329]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized3' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_mem__parameterized0' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2700]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_mem__parameterized0' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2700]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized3' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_load' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:329]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_write' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:1547]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_burst_converter' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:1867]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_reg_slice' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2366]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_reg_slice' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2366]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_burst_converter' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:1867]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized4' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_srl__parameterized2' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_srl__parameterized2' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized4' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_throttle' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2140]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized0' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2366]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized0' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2366]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized5' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_srl__parameterized3' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_srl__parameterized3' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized5' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized6' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_srl__parameterized4' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_srl__parameterized4' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_fifo__parameterized6' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2468]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_throttle' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2140]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2366]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2366]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:1858]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:1861]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_write' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:1547]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_read' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:1355]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized2' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2366]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized2' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:2366]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:1539]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi_read' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:1355]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem0_m_axi' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem0_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_store' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:796]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_fifo' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_srl' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_srl' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_fifo' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized0' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_mem' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2700]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_mem' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2700]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized0' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_srl__parameterized0' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_srl__parameterized0' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized2' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_srl__parameterized1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_srl__parameterized1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized2' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_store' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:796]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_load' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:329]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized3' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_mem__parameterized0' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2700]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_mem__parameterized0' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2700]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized3' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_load' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:329]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_write' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:1547]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_burst_converter' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:1867]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_reg_slice' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2366]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_reg_slice' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2366]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_burst_converter' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:1867]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized4' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_srl__parameterized2' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_srl__parameterized2' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized4' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_throttle' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2140]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized0' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2366]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized0' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2366]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized5' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_srl__parameterized3' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_srl__parameterized3' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized5' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized6' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_srl__parameterized4' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_srl__parameterized4' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2646]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_fifo__parameterized6' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2468]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_throttle' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2140]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2366]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2366]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:1858]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:1861]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_write' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:1547]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_read' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:1355]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized2' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2366]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized2' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:2366]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:1539]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi_read' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:1355]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_gmem1_m_axi' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_gmem1_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/ip/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/ip/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_mux_5_3_32_1_1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_mux_5_3_32_1_1.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_mux_5_3_32_1_1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_mux_5_3_32_1_1.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1_ip' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/ip/ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1_ip' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/ip/ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1_ip.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ekf_batch' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ekf_batch_0_0' (0#1) [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ip/design_1_ekf_batch_0_0/synth/design_1_ekf_batch_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_control_s_axi.v:297]
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op_lat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module dsp48e1_wrapper__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIGN in module flt_round_dsp_opt_full is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized66 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized66 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized66 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized66 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized66 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized49 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized64 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_eq_im__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[31] in module special_detect__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized62 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized62 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized62 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized62 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized62 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized15 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module dsp48e1_wrapper__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized60 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized9 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3684.359 ; gain = 730.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3702.223 ; gain = 748.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3702.223 ; gain = 748.668
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.883 . Memory (MB): peak = 3714.246 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2756 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ip/design_1_ekf_batch_0_0/constraints/ekf_batch_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ip/design_1_ekf_batch_0_0/constraints/ekf_batch_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.runs/design_1_ekf_batch_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.runs/design_1_ekf_batch_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 3936.949 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 192 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 60 instances
+  FDE => FDRE: 132 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.677 . Memory (MB): peak = 3995.992 ; gain = 59.043
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 3995.992 ; gain = 1042.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu9eg-ffvb1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 3995.992 ; gain = 1042.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.runs/design_1_ekf_batch_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 3995.992 ; gain = 1042.438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'ekf_batch_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'ekf_batch_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ekf_batch_gmem0_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ekf_batch_gmem1_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-6904] The RAM "ekf_batch_local_RAM_AUTO_1R1W:/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'ekf_batch_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'ekf_batch_control_s_axi'
+INFO: [Synth 8-7082] The signal mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ekf_batch_gmem0_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ekf_batch_gmem0_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-7082] The signal mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ekf_batch_gmem1_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ekf_batch_gmem1_m_axi_reg_slice__parameterized2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3995.992 ; gain = 1042.438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'flt_add_dsp:/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'flt_add_dsp:/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1:/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1:/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1:/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1:/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1:/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1:/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1:/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1:/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fdiv_32ns_32ns_32_9_no_dsp_1_U1452/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'inst/fdiv_32ns_32ns_32_9_no_dsp_1_U1452/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/fdiv_32ns_32ns_32_9_no_dsp_1_U1452/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'inst/fdiv_32ns_32ns_32_9_no_dsp_1_U1452/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/fdiv_32ns_32ns_32_9_no_dsp_1_U1452/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized28) to 'inst/fdiv_32ns_32ns_32_9_no_dsp_1_U1452/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/fdiv_32ns_32ns_32_9_no_dsp_1_U1452/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized28) to 'inst/fdiv_32ns_32ns_32_9_no_dsp_1_U1452/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/fdiv_32ns_32ns_32_9_no_dsp_1_U1452/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized0) to 'inst/fdiv_32ns_32ns_32_9_no_dsp_1_U1452/ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1:/ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1:/ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1:/ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1:/ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2520 (col length:168)
+BRAMs: 1824 (col length: RAMB18 168 RAMB36 84)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_109_6_fu_11789/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_109_6_fu_11789/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_101_4_fu_11743/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_101_4_fu_11743/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_96_3_fu_11724/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_89_1_fu_11636/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_89_1_fu_11636/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_22_fu_11841/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_24_fu_12065/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_24_fu_12065/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_117_8_fu_12177/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_117_8_fu_12177/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11_fu_12332/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11_fu_12332/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_30_13_fu_11989/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_30_13_fu_11989/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_22_fu_11841/ap_done_reg_reg)
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_1_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_2_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_3_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_4_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_5_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_6_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_7_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_1_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_2_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_3_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_4_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_5_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_6_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "ekf_batch__GB2/local_7_U/ram_reg" of size (depth=13 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-3886] merging instance 'grp_ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6_fu_11054/add_ln159_reg_1456_reg[0]' (FDE) to 'grp_ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6_fu_11054/select_ln158_reg_1448_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_ekf_batch_Pipeline_VITIS_LOOP_45_3_fu_11022/Q_11_fu_106_reg[0]' (FDR) to 'grp_ekf_batch_Pipeline_VITIS_LOOP_45_3_fu_11022/Q_11_fu_106_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_ekf_batch_Pipeline_VITIS_LOOP_45_3_fu_11022/Q_10_fu_102_reg[0]' (FDSE) to 'grp_ekf_batch_Pipeline_VITIS_LOOP_45_3_fu_11022/Q_5_fu_82_reg[0]'
+INFO: [Synth 8-3886] merging instance 'grp_ekf_batch_Pipeline_VITIS_LOOP_45_3_fu_11022/Q_9_fu_98_reg[0]' (FDR) to 'grp_ekf_batch_Pipeline_VITIS_LOOP_45_3_fu_11022/Q_11_fu_106_reg[1]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_45_3_fu_11022/\Q_fu_62_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln_reg_18662_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_176_12_fu_12416/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_176_12_fu_12416/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5_fu_11467/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5_fu_11467/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21_fu_11355/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21_fu_11355/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2_fu_11224/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2_fu_11224/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6_fu_11054/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_30_1_fu_11102/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_30_1_fu_11102/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6_fu_11054/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2_fu_10985/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_148_3_fu_10970/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_45_3_fu_11022/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_45_3_fu_11022/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2_fu_10985/\F_fu_122_reg[31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2_fu_10985/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_148_3_fu_10970/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_30_1_fu_11102/\Ft_5_fu_200_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_30_1_fu_11102/\Ft_4_fu_196_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_30_1_fu_11102/\Ft_3_fu_192_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_30_1_fu_11102/\Ft_2_fu_188_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_30_1_fu_11102/\Ft_1_fu_184_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_30_1_fu_11102/\Ft_fu_180_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5_fu_11467/\tmp_19_reg_2333_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2_fu_11224/\select_ln17_2_reg_2412_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2_fu_11224/\select_ln17_1_reg_2393_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21_fu_11355/\tmp_24_reg_2451_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21_fu_11355/\tmp_23_reg_2436_reg[31] )
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_4_full_dsp_1_U118/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U117/ce_r_reg' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_4_full_dsp_1_U119/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U117/ce_r_reg' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_4_full_dsp_1_U120/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U117/ce_r_reg' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fadd_32ns_32ns_32_4_full_dsp_1_U121/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U117/ce_r_reg' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_3_max_dsp_1_U123/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U117/ce_r_reg' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_3_max_dsp_1_U124/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U117/ce_r_reg' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_3_max_dsp_1_U125/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U117/ce_r_reg' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_3_max_dsp_1_U126/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U117/ce_r_reg' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'fmul_32ns_32ns_32_3_max_dsp_1_U127/ce_r_reg' into 'fadd_32ns_32ns_32_4_full_dsp_1_U117/ce_r_reg' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1.v:51]
+INFO: [Synth 8-4471] merging register 'acc_1_reg_887_reg[31:0]' into 'fadd_32ns_32ns_32_4_full_dsp_1_U117/dout_r_reg[31:0]' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1.v:410]
+INFO: [Synth 8-4471] merging register 'acc_2_reg_902_reg[31:0]' into 'fadd_32ns_32ns_32_4_full_dsp_1_U118/dout_r_reg[31:0]' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1.v:425]
+INFO: [Synth 8-4471] merging register 'acc_3_reg_917_reg[31:0]' into 'fadd_32ns_32ns_32_4_full_dsp_1_U119/dout_r_reg[31:0]' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1.v:440]
+INFO: [Synth 8-4471] merging register 'acc_4_reg_932_reg[31:0]' into 'fadd_32ns_32ns_32_4_full_dsp_1_U120/dout_r_reg[31:0]' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1.v:455]
+INFO: [Synth 8-4471] merging register 'mul_i_1_reg_877_reg[31:0]' into 'fmul_32ns_32ns_32_3_max_dsp_1_U123/dout_r_reg[31:0]' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1.v:396]
+INFO: [Synth 8-4471] merging register 'mul_i_2_reg_892_reg[31:0]' into 'fmul_32ns_32ns_32_3_max_dsp_1_U124/dout_r_reg[31:0]' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1.v:411]
+INFO: [Synth 8-4471] merging register 'mul_i_3_reg_907_reg[31:0]' into 'fmul_32ns_32ns_32_3_max_dsp_1_U125/dout_r_reg[31:0]' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1.v:426]
+INFO: [Synth 8-4471] merging register 'mul_i_4_reg_922_reg[31:0]' into 'fmul_32ns_32ns_32_3_max_dsp_1_U126/dout_r_reg[31:0]' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1.v:441]
+INFO: [Synth 8-4471] merging register 'mul_i_5_reg_937_reg[31:0]' into 'fmul_32ns_32ns_32_3_max_dsp_1_U127/dout_r_reg[31:0]' [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/0e0e/hdl/verilog/ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1.v:456]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_58_1_fu_11175/\fadd_32ns_32ns_32_4_full_dsp_1_U117/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_157_4_fu_11038/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_157_4_fu_11038/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_58_1_fu_11175/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_58_1_fu_11175/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_168_8_fu_11591/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_168_8_fu_11591/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_64_3_fu_11333/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_64_3_fu_11333/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_102_5_fu_11760/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_173_9_fu_11608/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_ekf_batch_Pipeline_VITIS_LOOP_173_9_fu_11608/ap_done_reg_reg)
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__5.
+INFO: [Synth 8-5784] Optimized 36 bits of RAM "store_unit/buff_wdata/U_fifo_mem/mem_reg" due to constant propagation. Old ram width 36 bits, new ram width 0 bits.
+WARNING: [Synth 8-5785] Removed RAM "store_unit/buff_wdata/U_fifo_mem/mem_reg" due to constant propagation. Write data stuck at zero 
+INFO: [Synth 8-3886] merging instance 'gmem1_addr_reg_17768_reg[62]' (FDE) to 'gmem1_addr_reg_17768_reg[61]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/tmp_addr_reg[0]' (FDRE) to 'gmem1_m_axi_U/store_unit/tmp_addr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/tmp_len_reg[0]' (FDRE) to 'gmem1_m_axi_U/store_unit/tmp_len_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/wreq_burst_conv/rs_req/data_p2_reg[1]' (FDE) to 'gmem1_m_axi_U/bus_write/wreq_burst_conv/rs_req/data_p2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\store_unit/tmp_addr_reg[1] )
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/wreq_burst_conv/rs_req/data_p2_reg[65]' (FDE) to 'gmem1_m_axi_U/bus_write/wreq_burst_conv/rs_req/data_p2_reg[64]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (gmem1_m_axi_U/\store_unit/fifo_wreq/full_n_reg )
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/wreq_burst_conv/start_addr_reg[0]' (FDRE) to 'gmem1_m_axi_U/bus_write/wreq_burst_conv/start_addr_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_burst_conv/start_addr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (gmem1_m_axi_U/\store_unit/buff_wdata/full_n_reg )
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/load_unit/tmp_addr_reg[0]' (FDRE) to 'gmem1_m_axi_U/load_unit/tmp_addr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/load_unit/tmp_len_reg[0]' (FDRE) to 'gmem1_m_axi_U/load_unit/tmp_len_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_read/rreq_burst_conv/rs_req/data_p2_reg[1]' (FDE) to 'gmem1_m_axi_U/bus_read/rreq_burst_conv/rs_req/data_p2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\load_unit/tmp_addr_reg[1] )
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_read/rreq_burst_conv/rs_req/data_p2_reg[65]' (FDE) to 'gmem1_m_axi_U/bus_read/rreq_burst_conv/rs_req/data_p2_reg[64]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_burst_conv/could_multi_bursts.len_buf_reg[4] )
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/wreq_burst_conv/could_multi_bursts.len_buf_reg[5]' (FDRE) to 'gmem1_m_axi_U/bus_write/wreq_burst_conv/could_multi_bursts.len_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/wreq_burst_conv/could_multi_bursts.len_buf_reg[6]' (FDRE) to 'gmem1_m_axi_U/bus_write/wreq_burst_conv/could_multi_bursts.len_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_burst_conv/could_multi_bursts.len_buf_reg[7] )
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_read/rreq_burst_conv/start_addr_reg[0]' (FDRE) to 'gmem1_m_axi_U/bus_read/rreq_burst_conv/start_addr_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_read/rreq_burst_conv/start_addr_reg[1] )
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/strb_buf_reg[0]' (FDE) to 'gmem1_m_axi_U/bus_write/strb_buf_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/strb_buf_reg[1]' (FDE) to 'gmem1_m_axi_U/bus_write/strb_buf_reg[2]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/strb_buf_reg[2]' (FDE) to 'gmem1_m_axi_U/bus_write/strb_buf_reg[3]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/strb_buf_reg[3]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[0]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[0]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[1]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[2]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[2]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[3]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[3]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[4]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[4]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[5]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[5]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[6]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[7]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[7]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[8]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[8]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[9]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[9]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[10]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[10]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[11]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[11]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[12]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[12]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[13]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[13]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[14]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[14]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[15]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[15]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[16]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[16]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[17]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[17]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[18]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[18]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[19]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[19]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[20]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[20]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[21]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[21]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[22]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[22]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[23]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[23]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[24]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[24]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[25]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[25]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[26]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[26]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[27]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[27]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[28]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[28]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[29]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[29]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[30]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_write/data_buf_reg[30]' (FDE) to 'gmem1_m_axi_U/bus_write/data_buf_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/data_buf_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_read/rreq_burst_conv/could_multi_bursts.len_buf_reg[4] )
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_read/rreq_burst_conv/could_multi_bursts.len_buf_reg[5]' (FDRE) to 'gmem1_m_axi_U/bus_read/rreq_burst_conv/could_multi_bursts.len_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/bus_read/rreq_burst_conv/could_multi_bursts.len_buf_reg[6]' (FDRE) to 'gmem1_m_axi_U/bus_read/rreq_burst_conv/could_multi_bursts.len_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_read/rreq_burst_conv/could_multi_bursts.len_buf_reg[7] )
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[0]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[1]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[2]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[3]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[4]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[5]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[6]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[7]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[8]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[9]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[10]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[11]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[12]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[13]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[14]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[15]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[16]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[17]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[18]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[19]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[20]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[21]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[22]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[23]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[24]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[25]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[26]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[27]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[28]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[29]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[30]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[31]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[32]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[33]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[34]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[35]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[36]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[37]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[38]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[39]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[40]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[41]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[42]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[43]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[44]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Synth 8-3886] merging instance 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[45]' (FDRE) to 'gmem1_m_axi_U/store_unit/fifo_wreq/U_fifo_srl/dout_reg[95]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_burst_conv/rs_req/data_p2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_burst_conv/sect_addr_buf_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_read/rreq_burst_conv/rs_req/data_p2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\store_unit/fifo_wreq/U_fifo_srl/dout_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/fifo_burst/U_fifo_srl/dout_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\load_unit/fifo_rreq/U_fifo_srl/dout_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_read/rreq_burst_conv/sect_addr_buf_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\store_unit/tmp_addr_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_burst_conv/rs_req/data_p1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\store_unit/tmp_valid_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_read/rreq_burst_conv/rs_req/data_p1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_throttle/req_fifo/U_fifo_srl/dout_reg[71] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_throttle/data_fifo/U_fifo_srl/dout_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_burst_conv/rs_req/data_p2_reg[94] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_burst_conv/rs_req/data_p2_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\store_unit/fifo_wrsp/U_fifo_srl/dout_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_throttle/rs_req/data_p2_reg[70] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_burst_conv/rs_req/data_p1_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_throttle/rs_req/data_p1_reg[71] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_burst_conv/end_addr_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_burst_conv/sect_addr_buf_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_throttle/rs_req/data_p2_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem1_m_axi_U/\bus_write/wreq_throttle/rs_req/data_p1_reg[63] )
+WARNING: [Synth 8-3332] Sequential element (bus_write/wreq_burst_conv/rs_req/FSM_sequential_state_reg[1]) is unused and will be removed from module ekf_batch_gmem1_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/wreq_burst_conv/rs_req/FSM_sequential_state_reg[0]) is unused and will be removed from module ekf_batch_gmem1_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/wreq_throttle/rs_req/FSM_sequential_state_reg[1]) is unused and will be removed from module ekf_batch_gmem1_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/wreq_throttle/rs_req/FSM_sequential_state_reg[0]) is unused and will be removed from module ekf_batch_gmem1_m_axi.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[24].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '24' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[19].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '19' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[14].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '14' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[9].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '9' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'RT[4].Q_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '4' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [d:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-7082] The signal store_unit/buff_wdata/U_fifo_mem/mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (fdiv_32ns_32ns_32_9_no_dsp_1_U1452/\din0_buf1_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fdiv_32ns_32ns_32_9_no_dsp_1_U1452/\din0_buf1_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem0_m_axi_U/\bus_write/wreq_burst_conv/start_addr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem0_m_axi_U/\store_unit/tmp_addr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gmem0_m_axi_U/\load_unit/tmp_addr_reg[1] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv__parameterized5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_15_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_15_viv.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module ekf_batch_control_s_axi.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module ekf_batch_control_s_axi.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:18 . Memory (MB): peak = 3995.992 ; gain = 1042.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:27 . Memory (MB): peak = 4152.445 ; gain = 1198.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:43 . Memory (MB): peak = 4331.469 ; gain = 1377.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/i_4/gmem1_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/i_13_0/gmem0_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:22 ; elapsed = 00:02:01 . Memory (MB): peak = 4331.469 ; gain = 1377.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/gmem1_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/gmem0_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:02:07 . Memory (MB): peak = 4335.047 ; gain = 1381.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:28 ; elapsed = 00:02:07 . Memory (MB): peak = 4335.047 ; gain = 1381.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:02:09 . Memory (MB): peak = 4335.047 ; gain = 1381.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:02:10 . Memory (MB): peak = 4335.047 ; gain = 1381.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:32 ; elapsed = 00:02:11 . Memory (MB): peak = 4335.047 ; gain = 1381.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:32 ; elapsed = 00:02:11 . Memory (MB): peak = 4335.047 ; gain = 1381.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                          | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e1_wrapper_1154                 | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_1104 | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_1087                 | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_1037 | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_1020                 | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_970  | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_953                  | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_903  | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_886                  | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_836  | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_819                  | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_769  | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_752                  | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_702  | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_609  | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_610  | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_607  | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_590  | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_591  | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_588  | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_571  | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_572  | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_569  | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_552  | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_553  | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_550  | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_533  | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_534  | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_531  | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_514  | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_515  | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_512  | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_495  | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_496  | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_493  | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_430                  | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_380  | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_363                  | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_313  | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_296                  | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_246  | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_229                  | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0_179  | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper                      | Dynamic      | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0      | C+A*B        | 24     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_135  | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_136  | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_133  | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_119  | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_120  | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_117  | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_103  | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_104  | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_101  | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_87   | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_88   | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_85   | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1      | A*B          | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2      | PCIN>>17+A*B | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3      | PCIN+A:B+C   | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------------------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY8   |   124|
+|2     |DSP48E1  |    60|
+|3     |LUT1     |   249|
+|4     |LUT2     |  1194|
+|5     |LUT3     | 10151|
+|6     |LUT4     |  3618|
+|7     |LUT5     |  4398|
+|8     |LUT6     |  9880|
+|9     |MUXCY    |  1526|
+|10    |MUXF7    |   558|
+|11    |MUXF8    |   192|
+|12    |RAM16X1S |   256|
+|13    |RAMB18E2 |     3|
+|15    |SRL16E   |   699|
+|16    |SRLC32E  |    24|
+|17    |XORCY    |   957|
+|18    |FDE      |   132|
+|19    |FDRE     | 30350|
+|20    |FDSE     |    26|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:32 ; elapsed = 00:02:11 . Memory (MB): peak = 4335.047 ; gain = 1381.492
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 207 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:06 ; elapsed = 00:02:00 . Memory (MB): peak = 4335.047 ; gain = 1087.723
+Synthesis Optimization Complete : Time (s): cpu = 00:01:32 ; elapsed = 00:02:12 . Memory (MB): peak = 4335.047 ; gain = 1381.492
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.611 . Memory (MB): peak = 4352.465 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3805 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 4456.605 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 708 instances were transformed.
+  (CARRY4) => CARRY8: 260 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 60 instances
+  FDE => FDRE: 132 instances
+  RAM16X1S => RAM32X1S (RAMS32): 256 instances
+
+Synth Design complete | Checksum: 2272d259
+INFO: [Common 17-83] Releasing license: Synthesis
+552 Infos, 114 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:44 ; elapsed = 00:02:25 . Memory (MB): peak = 4456.605 ; gain = 2474.352
+INFO: [Common 17-1381] The checkpoint 'D:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.runs/design_1_ekf_batch_0_0_synth_1/design_1_ekf_batch_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_ekf_batch_0_0, cache-ID = 03ac508e0dca2f8c
+INFO: [Coretcl 2-1174] Renamed 1372 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/MSDF_2_ZCU/msdf_2zcu/msdf_2zcu.runs/design_1_ekf_batch_0_0_synth_1/design_1_ekf_batch_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_ekf_batch_0_0_utilization_synth.rpt -pb design_1_ekf_batch_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  3 12:45:46 2026...

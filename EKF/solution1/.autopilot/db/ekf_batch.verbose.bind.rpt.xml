@@ -1,0 +1,75 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'ekf_batch'" level="0">
+<item name = "Date">Thu Sep  3 12:11:34 2026
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">EKF</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_148_3_fu_10970">ekf_batch_Pipeline_VITIS_LOOP_148_3, 101, 101, 1.010 us, 1.010 us, 101, 101, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2_fu_10985">ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2, 38, 38, 0.380 us, 0.380 us, 38, 38, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_45_3_fu_11022">ekf_batch_Pipeline_VITIS_LOOP_45_3, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_157_4_fu_11038">ekf_batch_Pipeline_VITIS_LOOP_157_4, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6_fu_11054">ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6, 38, 38, 0.380 us, 0.380 us, 38, 38, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_30_1_fu_11102">ekf_batch_Pipeline_VITIS_LOOP_30_1, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_58_1_fu_11175">ekf_batch_Pipeline_VITIS_LOOP_58_1, 34, 34, 0.340 us, 0.340 us, 34, 34, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2_fu_11224">ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2, 64, 64, 0.640 us, 0.640 us, 64, 64, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_64_3_fu_11333">ekf_batch_Pipeline_VITIS_LOOP_64_3, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21_fu_11355">ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21, 64, 64, 0.640 us, 0.640 us, 64, 64, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5_fu_11467">ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5, 41, 41, 0.410 us, 0.410 us, 41, 41, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_168_8_fu_11591">ekf_batch_Pipeline_VITIS_LOOP_168_8, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_173_9_fu_11608">ekf_batch_Pipeline_VITIS_LOOP_173_9, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_89_1_fu_11636">ekf_batch_Pipeline_VITIS_LOOP_89_1, 34, 34, 0.340 us, 0.340 us, 34, 34, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_96_3_fu_11724">ekf_batch_Pipeline_VITIS_LOOP_96_3, 24, 24, 0.240 us, 0.240 us, 24, 24, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_101_4_fu_11743">ekf_batch_Pipeline_VITIS_LOOP_101_4, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_102_5_fu_11760">ekf_batch_Pipeline_VITIS_LOOP_102_5, 29, 29, 0.290 us, 0.290 us, 29, 29, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_109_6_fu_11789">ekf_batch_Pipeline_VITIS_LOOP_109_6, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_22_fu_11841">ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_22, 64, 64, 0.640 us, 0.640 us, 64, 64, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_30_13_fu_11989">ekf_batch_Pipeline_VITIS_LOOP_30_13, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_24_fu_12065">ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_24, 64, 64, 0.640 us, 0.640 us, 64, 64, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_117_8_fu_12177">ekf_batch_Pipeline_VITIS_LOOP_117_8, 17, 17, 0.170 us, 0.170 us, 17, 17, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11_fu_12332">ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11, 38, 38, 0.380 us, 0.380 us, 38, 38, no</column>
+<column name="grp_ekf_batch_Pipeline_VITIS_LOOP_176_12_fu_12416">ekf_batch_Pipeline_VITIS_LOOP_176_12, 101, 101, 1.010 us, 1.010 us, 101, 101, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_138_1">?, ?, 502 ~ 4336, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_75_6">10, 260, 2 ~ 52, -, -, 5, no</column>
+<column name="  ++ VITIS_LOOP_76_7">0, 50, 10, -, -, 0 ~ 5, no</column>
+<column name=" + VITIS_LOOP_164_7">0, 3584, 287 ~ 512, -, -, 0 ~ 7, no</column>
+<column name="  ++ VITIS_LOOP_119_10">10, 235, 2 ~ 47, -, -, 5, no</column>
+<column name="   +++ VITIS_LOOP_120_11">0, 45, 9, -, -, 0 ~ 5, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

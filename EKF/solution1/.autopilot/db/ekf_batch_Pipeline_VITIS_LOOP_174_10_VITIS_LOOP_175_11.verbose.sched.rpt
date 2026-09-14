@@ -1,0 +1,236 @@
+
+
+================================================================
+== Vitis HLS Report for 'ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11'
+================================================================
+* Date:           Thu Sep  3 12:11:30 2026
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        EKF
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.450 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       38|       38|  0.380 us|  0.380 us|   38|   38|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                       |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |               Loop Name               |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_174_10_VITIS_LOOP_175_11  |       36|       36|         1|          1|          1|    36|       yes|
+        +---------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.45>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 4 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%indvar_flatten53 = alloca i32 1"   --->   Operation 6 'alloca' 'indvar_flatten53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%P_216_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_216"   --->   Operation 7 'read' 'P_216_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%P_215_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_215"   --->   Operation 8 'read' 'P_215_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%P_214_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_214"   --->   Operation 9 'read' 'P_214_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%P_213_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_213"   --->   Operation 10 'read' 'P_213_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%P_212_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_212"   --->   Operation 11 'read' 'P_212_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%P_211_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_211"   --->   Operation 12 'read' 'P_211_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%P_210_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_210"   --->   Operation 13 'read' 'P_210_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%P_209_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_209"   --->   Operation 14 'read' 'P_209_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%P_208_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_208"   --->   Operation 15 'read' 'P_208_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%P_207_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_207"   --->   Operation 16 'read' 'P_207_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%P_206_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_206"   --->   Operation 17 'read' 'P_206_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%P_205_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_205"   --->   Operation 18 'read' 'P_205_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%P_204_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_204"   --->   Operation 19 'read' 'P_204_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%P_203_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_203"   --->   Operation 20 'read' 'P_203_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%P_202_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_202"   --->   Operation 21 'read' 'P_202_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%P_201_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_201"   --->   Operation 22 'read' 'P_201_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%P_200_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_200"   --->   Operation 23 'read' 'P_200_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%P_199_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_199"   --->   Operation 24 'read' 'P_199_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%P_181_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_181"   --->   Operation 25 'read' 'P_181_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%P_182_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_182"   --->   Operation 26 'read' 'P_182_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%P_183_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_183"   --->   Operation 27 'read' 'P_183_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%P_184_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_184"   --->   Operation 28 'read' 'P_184_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%P_185_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_185"   --->   Operation 29 'read' 'P_185_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%P_186_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_186"   --->   Operation 30 'read' 'P_186_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%P_187_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_187"   --->   Operation 31 'read' 'P_187_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%P_188_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_188"   --->   Operation 32 'read' 'P_188_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%P_189_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_189"   --->   Operation 33 'read' 'P_189_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%P_190_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_190"   --->   Operation 34 'read' 'P_190_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%P_191_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_191"   --->   Operation 35 'read' 'P_191_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%P_192_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_192"   --->   Operation 36 'read' 'P_192_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%P_193_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_193"   --->   Operation 37 'read' 'P_193_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%P_194_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_194"   --->   Operation 38 'read' 'P_194_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%P_195_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_195"   --->   Operation 39 'read' 'P_195_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%P_196_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_196"   --->   Operation 40 'read' 'P_196_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%P_197_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_197"   --->   Operation 41 'read' 'P_197_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%P_198_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %P_198"   --->   Operation 42 'read' 'P_198_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.42ns)   --->   "%store_ln0 = store i6 0, i6 %indvar_flatten53"   --->   Operation 43 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 44 [1/1] (0.42ns)   --->   "%store_ln0 = store i3 0, i3 %i"   --->   Operation 44 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 45 [1/1] (0.42ns)   --->   "%store_ln0 = store i3 0, i3 %j"   --->   Operation 45 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc120"   --->   Operation 46 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%i_8 = load i3 %i" [ekf_core.cpp:174]   --->   Operation 47 'load' 'i_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%indvar_flatten53_load = load i6 %indvar_flatten53" [ekf_core.cpp:174]   --->   Operation 48 'load' 'indvar_flatten53_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%p_shl2 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i3.i3, i3 %i_8, i3 0" [ekf_core.cpp:174]   --->   Operation 49 'bitconcatenate' 'p_shl2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%p_shl6393_cast = zext i6 %p_shl2" [ekf_core.cpp:174]   --->   Operation 50 'zext' 'p_shl6393_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_shl3 = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i3.i1, i3 %i_8, i1 0" [ekf_core.cpp:174]   --->   Operation 51 'bitconcatenate' 'p_shl3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%p_shl6394_cast = zext i4 %p_shl3" [ekf_core.cpp:174]   --->   Operation 52 'zext' 'p_shl6394_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.78ns)   --->   "%empty = sub i7 %p_shl6393_cast, i7 %p_shl6394_cast" [ekf_core.cpp:174]   --->   Operation 53 'sub' 'empty' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 54 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.78ns)   --->   "%icmp_ln174 = icmp_eq  i6 %indvar_flatten53_load, i6 36" [ekf_core.cpp:174]   --->   Operation 55 'icmp' 'icmp_ln174' <Predicate = true> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 56 [1/1] (0.78ns)   --->   "%add_ln174 = add i6 %indvar_flatten53_load, i6 1" [ekf_core.cpp:174]   --->   Operation 56 'add' 'add_ln174' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln174 = br i1 %icmp_ln174, void %for.inc123, void %VITIS_LOOP_176_12.exitStub" [ekf_core.cpp:174]   --->   Operation 57 'br' 'br_ln174' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%j_load = load i3 %j" [ekf_core.cpp:175]   --->   Operation 58 'load' 'j_load' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_174_10_VITIS_LOOP_175_11_str"   --->   Operation 59 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 36, i64 36, i64 36"   --->   Operation 60 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.67ns)   --->   "%icmp_ln175 = icmp_eq  i3 %j_load, i3 6" [ekf_core.cpp:175]   --->   Operation 61 'icmp' 'icmp_ln175' <Predicate = (!icmp_ln174)> <Delay = 0.67> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 62 [1/1] (0.20ns)   --->   "%select_ln174 = select i1 %icmp_ln175, i3 0, i3 %j_load" [ekf_core.cpp:174]   --->   Operation 62 'select' 'select_ln174' <Predicate = (!icmp_ln174)> <Delay = 0.20> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 63 [1/1] (0.67ns)   --->   "%add_ln174_1 = add i3 %i_8, i3 1" [ekf_core.cpp:174]   --->   Operation 63 'add' 'add_ln174_1' <Predicate = (!icmp_ln174)> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%p_shl6393_mid1 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i3.i3, i3 %add_ln174_1, i3 0" [ekf_core.cpp:174]   --->   Operation 64 'bitconcatenate' 'p_shl6393_mid1' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_shl6393_cast_mid1 = zext i6 %p_shl6393_mid1" [ekf_core.cpp:174]   --->   Operation 65 'zext' 'p_shl6393_cast_mid1' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%p_shl6394_mid1 = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i3.i1, i3 %add_ln174_1, i1 0" [ekf_core.cpp:174]   --->   Operation 66 'bitconcatenate' 'p_shl6394_mid1' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%p_shl6394_cast_mid1 = zext i4 %p_shl6394_mid1" [ekf_core.cpp:174]   --->   Operation 67 'zext' 'p_shl6394_cast_mid1' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.78ns)   --->   "%p_mid151 = sub i7 %p_shl6393_cast_mid1, i7 %p_shl6394_cast_mid1" [ekf_core.cpp:174]   --->   Operation 68 'sub' 'p_mid151' <Predicate = (!icmp_ln174)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 69 [1/1] (0.36ns)   --->   "%select_ln174_1 = select i1 %icmp_ln175, i7 %p_mid151, i7 %empty" [ekf_core.cpp:174]   --->   Operation 69 'select' 'select_ln174_1' <Predicate = (!icmp_ln174)> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%trunc_ln174 = trunc i7 %select_ln174_1" [ekf_core.cpp:174]   --->   Operation 70 'trunc' 'trunc_ln174' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 71 'specpipeline' 'specpipeline_ln0' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.20ns)   --->   "%select_ln174_2 = select i1 %icmp_ln175, i3 %add_ln174_1, i3 %i_8" [ekf_core.cpp:174]   --->   Operation 72 'select' 'select_ln174_2' <Predicate = (!icmp_ln174)> <Delay = 0.20> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%trunc_ln175_cast = zext i3 %select_ln174" [ekf_core.cpp:174]   --->   Operation 73 'zext' 'trunc_ln175_cast' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%specloopname_ln175 = specloopname void @_ssdm_op_SpecLoopName, void @empty_26" [ekf_core.cpp:175]   --->   Operation 74 'specloopname' 'specloopname_ln175' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.62ns)   --->   "%tmp_s = mux i32 @_ssdm_op_Mux.ap_auto.6f32.i3, i32 %P_198_read, i32 %P_197_read, i32 %P_196_read, i32 %P_195_read, i32 %P_194_read, i32 %P_193_read, i3 %select_ln174" [ekf_core.cpp:175]   --->   Operation 75 'mux' 'tmp_s' <Predicate = (!icmp_ln174)> <Delay = 0.62> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 76 [1/1] (0.62ns)   --->   "%tmp_52 = mux i32 @_ssdm_op_Mux.ap_auto.6f32.i3, i32 %P_192_read, i32 %P_191_read, i32 %P_190_read, i32 %P_189_read, i32 %P_188_read, i32 %P_187_read, i3 %select_ln174" [ekf_core.cpp:175]   --->   Operation 76 'mux' 'tmp_52' <Predicate = (!icmp_ln174)> <Delay = 0.62> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 77 [1/1] (0.62ns)   --->   "%tmp_53 = mux i32 @_ssdm_op_Mux.ap_auto.6f32.i3, i32 %P_186_read, i32 %P_185_read, i32 %P_184_read, i32 %P_183_read, i32 %P_182_read, i32 %P_181_read, i3 %select_ln174" [ekf_core.cpp:175]   --->   Operation 77 'mux' 'tmp_53' <Predicate = (!icmp_ln174)> <Delay = 0.62> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 78 [1/1] (0.62ns)   --->   "%tmp_54 = mux i32 @_ssdm_op_Mux.ap_auto.6f32.i3, i32 %P_199_read, i32 %P_200_read, i32 %P_201_read, i32 %P_202_read, i32 %P_203_read, i32 %P_204_read, i3 %select_ln174" [ekf_core.cpp:175]   --->   Operation 78 'mux' 'tmp_54' <Predicate = (!icmp_ln174)> <Delay = 0.62> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 79 [1/1] (0.62ns)   --->   "%tmp_55 = mux i32 @_ssdm_op_Mux.ap_auto.6f32.i3, i32 %P_205_read, i32 %P_206_read, i32 %P_207_read, i32 %P_208_read, i32 %P_209_read, i32 %P_210_read, i3 %select_ln174" [ekf_core.cpp:175]   --->   Operation 79 'mux' 'tmp_55' <Predicate = (!icmp_ln174)> <Delay = 0.62> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 80 [1/1] (0.62ns)   --->   "%tmp_56 = mux i32 @_ssdm_op_Mux.ap_auto.6f32.i3, i32 %P_211_read, i32 %P_212_read, i32 %P_213_read, i32 %P_214_read, i32 %P_215_read, i32 %P_216_read, i3 %select_ln174" [ekf_core.cpp:175]   --->   Operation 80 'mux' 'tmp_56' <Predicate = (!icmp_ln174)> <Delay = 0.62> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 81 [1/1] (0.62ns)   --->   "%tmp_57 = mux i32 @_ssdm_op_Mux.ap_auto.6f32.i3, i32 %tmp_s, i32 %tmp_52, i32 %tmp_53, i32 %tmp_54, i32 %tmp_55, i32 %tmp_56, i3 %select_ln174_2" [ekf_core.cpp:175]   --->   Operation 81 'mux' 'tmp_57' <Predicate = (!icmp_ln174)> <Delay = 0.62> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 82 [1/1] (0.67ns)   --->   "%add_ln175 = add i3 %select_ln174, i3 %trunc_ln174" [ekf_core.cpp:175]   --->   Operation 82 'add' 'add_ln175' <Predicate = (!icmp_ln174)> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 83 [1/1] (0.79ns)   --->   "%add_ln175_3 = add i4 %trunc_ln175_cast, i4 6" [ekf_core.cpp:175]   --->   Operation 83 'add' 'add_ln175_3' <Predicate = (!icmp_ln174)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%zext_ln175 = zext i4 %add_ln175_3" [ekf_core.cpp:175]   --->   Operation 84 'zext' 'zext_ln175' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.77ns)   --->   "%add_ln175_1 = add i7 %zext_ln175, i7 %select_ln174_1" [ekf_core.cpp:175]   --->   Operation 85 'add' 'add_ln175_1' <Predicate = (!icmp_ln174)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%lshr_ln3 = partselect i4 @_ssdm_op_PartSelect.i4.i7.i32.i32, i7 %add_ln175_1, i32 3, i32 6" [ekf_core.cpp:175]   --->   Operation 86 'partselect' 'lshr_ln3' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%zext_ln175_1 = zext i4 %lshr_ln3" [ekf_core.cpp:175]   --->   Operation 87 'zext' 'zext_ln175_1' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%local_addr = getelementptr i32 %local, i64 0, i64 %zext_ln175_1" [ekf_core.cpp:175]   --->   Operation 88 'getelementptr' 'local_addr' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%local_1_addr = getelementptr i32 %local_1, i64 0, i64 %zext_ln175_1" [ekf_core.cpp:175]   --->   Operation 89 'getelementptr' 'local_1_addr' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%local_2_addr = getelementptr i32 %local_2, i64 0, i64 %zext_ln175_1" [ekf_core.cpp:175]   --->   Operation 90 'getelementptr' 'local_2_addr' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%local_3_addr = getelementptr i32 %local_3, i64 0, i64 %zext_ln175_1" [ekf_core.cpp:175]   --->   Operation 91 'getelementptr' 'local_3_addr' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%local_4_addr = getelementptr i32 %local_4, i64 0, i64 %zext_ln175_1" [ekf_core.cpp:175]   --->   Operation 92 'getelementptr' 'local_4_addr' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%local_5_addr = getelementptr i32 %local_5, i64 0, i64 %zext_ln175_1" [ekf_core.cpp:175]   --->   Operation 93 'getelementptr' 'local_5_addr' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%local_6_addr = getelementptr i32 %local_6, i64 0, i64 %zext_ln175_1" [ekf_core.cpp:175]   --->   Operation 94 'getelementptr' 'local_6_addr' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%local_7_addr = getelementptr i32 %local_7, i64 0, i64 %zext_ln175_1" [ekf_core.cpp:175]   --->   Operation 95 'getelementptr' 'local_7_addr' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.73ns)   --->   "%switch_ln175 = switch i3 %add_ln175, void %arrayidx119.case.5, i3 2, void %arrayidx119.case.0, i3 3, void %arrayidx119.case.1, i3 4, void %arrayidx119.case.2, i3 5, void %arrayidx119.case.3, i3 6, void %arrayidx119.case.4, i3 1, void %arrayidx119.case.7, i3 0, void %arrayidx119.case.6" [ekf_core.cpp:175]   --->   Operation 96 'switch' 'switch_ln175' <Predicate = (!icmp_ln174)> <Delay = 0.73>
+ST_1 : Operation 97 [1/1] (0.67ns)   --->   "%store_ln175 = store i32 %tmp_57, i4 %local_6_addr" [ekf_core.cpp:175]   --->   Operation 97 'store' 'store_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 0)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 13> <RAM>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%br_ln175 = br void %arrayidx119.exit" [ekf_core.cpp:175]   --->   Operation 98 'br' 'br_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 0)> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.67ns)   --->   "%store_ln175 = store i32 %tmp_57, i4 %local_7_addr" [ekf_core.cpp:175]   --->   Operation 99 'store' 'store_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 1)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 13> <RAM>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%br_ln175 = br void %arrayidx119.exit" [ekf_core.cpp:175]   --->   Operation 100 'br' 'br_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 1)> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.67ns)   --->   "%store_ln175 = store i32 %tmp_57, i4 %local_4_addr" [ekf_core.cpp:175]   --->   Operation 101 'store' 'store_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 6)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 13> <RAM>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%br_ln175 = br void %arrayidx119.exit" [ekf_core.cpp:175]   --->   Operation 102 'br' 'br_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 6)> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.67ns)   --->   "%store_ln175 = store i32 %tmp_57, i4 %local_3_addr" [ekf_core.cpp:175]   --->   Operation 103 'store' 'store_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 5)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 13> <RAM>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%br_ln175 = br void %arrayidx119.exit" [ekf_core.cpp:175]   --->   Operation 104 'br' 'br_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 5)> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.67ns)   --->   "%store_ln175 = store i32 %tmp_57, i4 %local_2_addr" [ekf_core.cpp:175]   --->   Operation 105 'store' 'store_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 4)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 13> <RAM>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%br_ln175 = br void %arrayidx119.exit" [ekf_core.cpp:175]   --->   Operation 106 'br' 'br_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 4)> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.67ns)   --->   "%store_ln175 = store i32 %tmp_57, i4 %local_1_addr" [ekf_core.cpp:175]   --->   Operation 107 'store' 'store_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 3)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 13> <RAM>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%br_ln175 = br void %arrayidx119.exit" [ekf_core.cpp:175]   --->   Operation 108 'br' 'br_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 3)> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.67ns)   --->   "%store_ln175 = store i32 %tmp_57, i4 %local_addr" [ekf_core.cpp:175]   --->   Operation 109 'store' 'store_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 2)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 13> <RAM>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%br_ln175 = br void %arrayidx119.exit" [ekf_core.cpp:175]   --->   Operation 110 'br' 'br_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 2)> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.67ns)   --->   "%store_ln175 = store i32 %tmp_57, i4 %local_5_addr" [ekf_core.cpp:175]   --->   Operation 111 'store' 'store_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 7)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 13> <RAM>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%br_ln175 = br void %arrayidx119.exit" [ekf_core.cpp:175]   --->   Operation 112 'br' 'br_ln175' <Predicate = (!icmp_ln174 & add_ln175 == 7)> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.67ns)   --->   "%add_ln175_2 = add i3 %select_ln174, i3 1" [ekf_core.cpp:175]   --->   Operation 113 'add' 'add_ln175_2' <Predicate = (!icmp_ln174)> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 114 [1/1] (0.42ns)   --->   "%store_ln175 = store i6 %add_ln174, i6 %indvar_flatten53" [ekf_core.cpp:175]   --->   Operation 114 'store' 'store_ln175' <Predicate = (!icmp_ln174)> <Delay = 0.42>
+ST_1 : Operation 115 [1/1] (0.42ns)   --->   "%store_ln175 = store i3 %select_ln174_2, i3 %i" [ekf_core.cpp:175]   --->   Operation 115 'store' 'store_ln175' <Predicate = (!icmp_ln174)> <Delay = 0.42>
+ST_1 : Operation 116 [1/1] (0.42ns)   --->   "%store_ln175 = store i3 %add_ln175_2, i3 %j" [ekf_core.cpp:175]   --->   Operation 116 'store' 'store_ln175' <Predicate = (!icmp_ln174)> <Delay = 0.42>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%br_ln175 = br void %for.inc120" [ekf_core.cpp:175]   --->   Operation 117 'br' 'br_ln175' <Predicate = (!icmp_ln174)> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 118 'ret' 'ret_ln0' <Predicate = (icmp_ln174)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.450ns
+The critical path consists of the following:
+	'alloca' operation ('i') [46]  (0.000 ns)
+	'load' operation ('i', ekf_core.cpp:174) on local variable 'i' [89]  (0.000 ns)
+	'add' operation ('add_ln174_1', ekf_core.cpp:174) [106]  (0.673 ns)
+	'sub' operation ('p_mid151', ekf_core.cpp:174) [111]  (0.781 ns)
+	'select' operation ('select_ln174_1', ekf_core.cpp:174) [112]  (0.360 ns)
+	'add' operation ('add_ln175_1', ekf_core.cpp:175) [128]  (0.773 ns)
+	'getelementptr' operation ('local_6_addr', ekf_core.cpp:175) [137]  (0.000 ns)
+	'store' operation ('store_ln175', ekf_core.cpp:175) of variable 'tmp_57', ekf_core.cpp:175 on array 'local_6' [141]  (0.677 ns)
+	blocking operation 0.1865 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

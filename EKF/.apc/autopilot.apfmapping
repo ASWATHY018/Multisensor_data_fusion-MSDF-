@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="ekf_core.hpp" path="D:\MSDF_2_ZCU\ekf_core.hpp"/>
+    <originFiles name="ekf_core.cpp" path="D:\MSDF_2_ZCU\ekf_core.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="ekf_tb.cpp" path="D:\MSDF_2_ZCU\ekf_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

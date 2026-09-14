@@ -1,0 +1,91 @@
+// ============================================================================
+//  sensor_models.c  -  PS-side EKF linearization (float, runs on ARM A53)
+// ============================================================================
+#include "sensor_models.h"
+#include <math.h>
+
+#define DEG (3.14159265358979f/180.0f)
+
+// 1-sigma sensor specs -> variances r (must match the golden model)
+static const float R_RADAR[3] = { 20.0f*20.0f, (0.5f*DEG)*(0.5f*DEG), (0.5f*DEG)*(0.5f*DEG) };
+static const float R_IRST[2]  = { (0.05f*DEG)*(0.05f*DEG), (0.05f*DEG)*(0.05f*DEG) };
+static const float R_RWR[2]   = { (3.0f*DEG)*(3.0f*DEG),  (3.0f*DEG)*(3.0f*DEG) };
+
+static float wrap_pi(float a) {
+    while (a >  3.14159265358979f) a -= 6.28318530717959f;
+    while (a < -3.14159265358979f) a += 6.28318530717959f;
+    return a;
+}
+
+// xp = F x  (constant-velocity: pos += v*dt)
+void sm_predict_state(const float x[6], float xp[6]) {
+    xp[0] = x[0] + SM_DT * x[3];
+    xp[1] = x[1] + SM_DT * x[4];
+    xp[2] = x[2] + SM_DT * x[5];
+    xp[3] = x[3];
+    xp[4] = x[4];
+    xp[5] = x[5];
+}
+
+// ---- measurement models h(x) and Jacobian rows H (position-only) -----------
+static void h_radar(const float x[6], float z[3]) {
+    float X=x[0], Y=x[1], Z=x[2];
+    z[0] = sqrtf(X*X + Y*Y + Z*Z);
+    z[1] = atan2f(Y, X);
+    z[2] = atan2f(Z, sqrtf(X*X + Y*Y));
+}
+static void H_radar(const float x[6], float H[3][6]) {
+    float X=x[0], Y=x[1], Z=x[2];
+    float r2 = X*X+Y*Y+Z*Z, r = sqrtf(r2);
+    float rxy2 = X*X+Y*Y, rxy = sqrtf(rxy2);
+    for (int i=0;i<3;i++) for(int j=0;j<6;j++) H[i][j]=0.0f;
+    H[0][0]=X/r;  H[0][1]=Y/r;  H[0][2]=Z/r;                 // range
+    H[1][0]=-Y/rxy2; H[1][1]=X/rxy2;                         // az
+    H[2][0]=-X*Z/(r2*rxy); H[2][1]=-Y*Z/(r2*rxy); H[2][2]=rxy/r2; // el
+}
+static void h_ang(const float x[6], float z[2]) {
+    float X=x[0], Y=x[1], Z=x[2];
+    z[0] = atan2f(Y, X);
+    z[1] = atan2f(Z, sqrtf(X*X + Y*Y));
+}
+static void H_ang(const float x[6], float H[2][6]) {
+    float X=x[0], Y=x[1], Z=x[2];
+    float r2 = X*X+Y*Y+Z*Z, rxy2 = X*X+Y*Y, rxy = sqrtf(rxy2);
+    for (int i=0;i<2;i++) for(int j=0;j<6;j++) H[i][j]=0.0f;
+    H[0][0]=-Y/rxy2; H[0][1]=X/rxy2;                         // az
+    H[1][0]=-X*Z/(r2*rxy); H[1][1]=-Y*Z/(r2*rxy); H[1][2]=rxy/r2; // el
+}
+
+// write one scalar row (H[6], y, r) into the flat buffer at meas index k
+static void put_row(float *trk, int k, const float H[6], float y, float r) {
+    float *dst = trk + SM_OFF_M + k*SM_MROW;
+    for (int i=0;i<6;i++) dst[i]=H[i];
+    dst[6]=y; dst[7]=r;
+}
+
+int sm_fill_track(float trk_out[SM_STRIDE],
+                  const float x[6], const float P[36],
+                  const float radar_z[3], const float irst_z[2], const float rwr_z[2]) {
+    // prior x and P go straight into the buffer (the PL predicts internally)
+    for (int i=0;i<6;i++)  trk_out[SM_OFF_X + i] = x[i];
+    for (int i=0;i<36;i++) trk_out[SM_OFF_P + i] = P[i];
+
+    // linearize at the predicted state
+    float xp[6]; sm_predict_state(x, xp);
+
+    int k = 0;
+    // --- radar: 3 scalar rows ---
+    float hr[3], Hr[3][6]; h_radar(xp, hr); H_radar(xp, Hr);
+    put_row(trk_out, k++, Hr[0], radar_z[0]-hr[0],            R_RADAR[0]); // range
+    put_row(trk_out, k++, Hr[1], wrap_pi(radar_z[1]-hr[1]),   R_RADAR[1]); // az
+    put_row(trk_out, k++, Hr[2], wrap_pi(radar_z[2]-hr[2]),   R_RADAR[2]); // el
+    // --- IRST: 2 rows ---
+    float ha[2], Ha[2][6]; h_ang(xp, ha); H_ang(xp, Ha);
+    put_row(trk_out, k++, Ha[0], wrap_pi(irst_z[0]-ha[0]),    R_IRST[0]);
+    put_row(trk_out, k++, Ha[1], wrap_pi(irst_z[1]-ha[1]),    R_IRST[1]);
+    // --- RWR: 2 rows ---
+    put_row(trk_out, k++, Ha[0], wrap_pi(rwr_z[0]-ha[0]),     R_RWR[0]);
+    put_row(trk_out, k++, Ha[1], wrap_pi(rwr_z[1]-ha[1]),     R_RWR[1]);
+
+    return k; // = SM_NMEAS
+}

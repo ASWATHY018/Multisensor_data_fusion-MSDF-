@@ -1,0 +1,36 @@
+12:57:46 **** Build of configuration Debug for project ekf_smoke ****
+make all 
+'Building file: ../src/airpicture_net.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/airpicture_net.o" -ID:/MSDF_2_ZCU/ws_zcu/ekf/export/ekf/sw/ekf/standalone_domain/bspinclude/include -MMD -MP -MF"src/airpicture_net.d" -MT"src/airpicture_net.o" -o "src/airpicture_net.o" "../src/airpicture_net.c"
+'Finished building: ../src/airpicture_net.c'
+' '
+'Building file: ../src/main_tracker_net_d2.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_tracker_net_d2.o" -ID:/MSDF_2_ZCU/ws_zcu/ekf/export/ekf/sw/ekf/standalone_domain/bspinclude/include -MMD -MP -MF"src/main_tracker_net_d2.d" -MT"src/main_tracker_net_d2.o" -o "src/main_tracker_net_d2.o" "../src/main_tracker_net_d2.c"
+'Finished building: ../src/main_tracker_net_d2.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -ID:/MSDF_2_ZCU/ws_zcu/ekf/export/ekf/sw/ekf/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/sensor_in.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensor_in.o" -ID:/MSDF_2_ZCU/ws_zcu/ekf/export/ekf/sw/ekf/standalone_domain/bspinclude/include -MMD -MP -MF"src/sensor_in.d" -MT"src/sensor_in.o" -o "src/sensor_in.o" "../src/sensor_in.c"
+'Finished building: ../src/sensor_in.c'
+' '
+'Building target: ekf_smoke.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/MSDF_2_ZCU/ws_zcu/ekf/export/ekf/sw/ekf/standalone_domain/bsplib/lib -o "ekf_smoke.elf"  ./src/airpicture_net.o ./src/main_tracker_net_d2.o ./src/platform.o ./src/sensor_in.o ./src/sensor_models.o ./src/track_mgr.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: ekf_smoke.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size ekf_smoke.elf  |tee "ekf_smoke.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 132901	   5600	8524031	8662532	 842e04	ekf_smoke.elf
+'Finished building: ekf_smoke.elf.size'
+' '
+
+12:57:47 Build Finished (took 993ms)
+

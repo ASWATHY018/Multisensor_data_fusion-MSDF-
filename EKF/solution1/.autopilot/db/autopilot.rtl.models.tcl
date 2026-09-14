@@ -1,0 +1,54 @@
+set SynModuleInfo {
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_148_3 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_148_3 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_148_3
+    SUBMODULES {
+      {MODELNAME ekf_batch_flow_control_loop_pipe_sequential_init RTLNAME ekf_batch_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME ekf_batch_flow_control_loop_pipe_sequential_init_U}
+    }
+  }
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_157_4 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_157_4 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_157_4
+    SUBMODULES {
+      {MODELNAME ekf_batch_mux_6_3_32_1_1 RTLNAME ekf_batch_mux_6_3_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_158_5_VITIS_LOOP_159_6
+    SUBMODULES {
+      {MODELNAME ekf_batch_mux_8_3_32_1_1 RTLNAME ekf_batch_mux_8_3_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_41_1_VITIS_LOOP_42_2}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_45_3 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_45_3 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_45_3}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_58_1 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_58_1 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_58_1
+    SUBMODULES {
+      {MODELNAME ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1 RTLNAME ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1 RTLNAME ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 2 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_64_3 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_64_3 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_64_3}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_2}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_30_1 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_30_1 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_30_1}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_21}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_73_4_VITIS_LOOP_74_5}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_168_8 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_168_8 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_168_8}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_89_1 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_89_1 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_89_1}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_96_3 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_96_3 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_96_3}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_101_4 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_101_4 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_101_4}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_102_5 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_102_5 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_102_5}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_109_6 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_109_6 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_109_6}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_22 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_22 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_22}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_30_13 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_30_13 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_30_13}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_24 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_24 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_17_1_VITIS_LOOP_18_24}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_117_8 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_117_8 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_117_8}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_173_9 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_173_9 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_173_9}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_174_10_VITIS_LOOP_175_11}
+  {SRCNAME ekf_batch_Pipeline_VITIS_LOOP_176_12 MODELNAME ekf_batch_Pipeline_VITIS_LOOP_176_12 RTLNAME ekf_batch_ekf_batch_Pipeline_VITIS_LOOP_176_12}
+  {SRCNAME ekf_batch MODELNAME ekf_batch RTLNAME ekf_batch IS_TOP 1
+    SUBMODULES {
+      {MODELNAME ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1 RTLNAME ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1 BINDTYPE op TYPE fdiv IMPL fabric LATENCY 8 ALLOW_PRAGMA 1}
+      {MODELNAME ekf_batch_mux_5_3_32_1_1 RTLNAME ekf_batch_mux_5_3_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1 RTLNAME ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME ekf_batch_local_RAM_AUTO_1R1W RTLNAME ekf_batch_local_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME ekf_batch_gmem0_m_axi RTLNAME ekf_batch_gmem0_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME ekf_batch_gmem1_m_axi RTLNAME ekf_batch_gmem1_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME ekf_batch_control_s_axi RTLNAME ekf_batch_control_s_axi BINDTYPE interface TYPE interface_s_axilite}
+    }
+  }
+}

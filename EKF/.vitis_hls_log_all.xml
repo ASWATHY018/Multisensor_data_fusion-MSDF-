@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <packageLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ap_sig_allocacmp_P_loc_load' is changed to 'ap_sig_allocacmp_P_loc_load_x' due to conflict." projectName="EKF" solutionName="solution1" date="2026-09-03T12:11:40.541+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="EKF" solutionName="solution1" date="2026-09-03T12:11:40.167+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'ekf_batch_Pipeline_VITIS_LOOP_176_12/m_axi_gmem0_BREADY' to 0." projectName="EKF" solutionName="solution1" date="2026-09-03T12:11:40.012+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'ekf_batch_Pipeline_VITIS_LOOP_176_12/m_axi_gmem0_AWUSER' to 0." projectName="EKF" solutionName="solution1" date="2026-09-03T12:11:40.007+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'ekf_batch_Pipeline_VITIS_LOOP_176_12/m_axi_gmem0_AWREGION' to 0." projectName="EKF" solutionName="solution1" date="2026-09-03T12:11:40.001+0530" type="Warning"/>
+      </synLog>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ekf_batch_fmul_32ns_32ns_32_3_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="EKF" solutionName="solution1" date="2026-09-03T12:18:32.501+0530" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ekf_batch_fdiv_32ns_32ns_32_9_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="EKF" solutionName="solution1" date="2026-09-03T12:18:30.501+0530" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ekf_batch_faddfsub_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="EKF" solutionName="solution1" date="2026-09-03T12:18:30.501+0530" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'ekf_batch_fadd_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;" projectName="EKF" solutionName="solution1" date="2026-09-03T12:18:30.501+0530" type="Warning"/>
+      </packageLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,40 @@
+<pragmas>
+<pragma file="ekf_core.cpp" line="38" pragmaType="inline" parentfunction="build_FQ" off="0" region="0" recursive="0"/>
+<pragma file="ekf_core.cpp" line="140" pragmaType="unroll" parentfunction="ekf_batch" factor="-1" skip_exit_check="0"/>
+<pragma file="ekf_core.cpp" line="149" pragmaType="pipeline" parentfunction="ekf_batch" off="0" ii="1" rewind="0" style=""/>
+<pragma file="ekf_core.cpp" line="177" pragmaType="pipeline" parentfunction="ekf_batch" off="0" ii="1" rewind="0" style=""/>
+<pragma file="ekf_core.cpp" line="129" pragmaType="interface" parentfunction="ekf_batch" mode="m_axi" port="data" bundle="gmem0" offset="slave" name="" depth="9800" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="ekf_core.cpp" line="130" pragmaType="interface" parentfunction="ekf_batch" mode="m_axi" port="nmeas" bundle="gmem1" offset="slave" name="" depth="100" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="ekf_core.cpp" line="131" pragmaType="interface" parentfunction="ekf_batch" mode="s_axilite" port="data" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="ekf_core.cpp" line="132" pragmaType="interface" parentfunction="ekf_batch" mode="s_axilite" port="nmeas" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="ekf_core.cpp" line="133" pragmaType="interface" parentfunction="ekf_batch" mode="s_axilite" port="num_tracks" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="ekf_core.cpp" line="134" pragmaType="interface" parentfunction="ekf_batch" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="ekf_core.cpp" line="147" pragmaType="array_partition" parentfunction="ekf_batch" dim="1" factor="8" mode="cyclic" dynamic="0" variable="local"/>
+<pragma file="ekf_core.cpp" line="155" pragmaType="array_partition" parentfunction="ekf_batch" dim="1" factor="0" mode="complete" dynamic="0" variable="x"/>
+<pragma file="ekf_core.cpp" line="156" pragmaType="array_partition" parentfunction="ekf_batch" dim="0" factor="0" mode="complete" dynamic="0" variable="P"/>
+<pragma file="ekf_core.cpp" line="167" pragmaType="array_partition" parentfunction="ekf_batch" dim="1" factor="0" mode="complete" dynamic="0" variable="H"/>
+<pragma file="ekf_core.cpp" line="29" pragmaType="inline" parentfunction="transpose" off="0" region="0" recursive="0"/>
+<pragma file="ekf_core.cpp" line="32" pragmaType="unroll" parentfunction="transpose" factor="-1" skip_exit_check="0"/>
+<pragma file="ekf_core.cpp" line="50" pragmaType="inline" parentfunction="predict" off="0" region="0" recursive="0"/>
+<pragma file="ekf_core.cpp" line="77" pragmaType="unroll" parentfunction="predict" factor="-1" skip_exit_check="0"/>
+<pragma file="ekf_core.cpp" line="59" pragmaType="pipeline" parentfunction="predict" off="0" ii="1" rewind="0" style=""/>
+<pragma file="ekf_core.cpp" line="52" pragmaType="array_partition" parentfunction="predict" dim="0" factor="0" mode="complete" dynamic="0" variable="F"/>
+<pragma file="ekf_core.cpp" line="53" pragmaType="array_partition" parentfunction="predict" dim="0" factor="0" mode="complete" dynamic="0" variable="Q"/>
+<pragma file="ekf_core.cpp" line="57" pragmaType="array_partition" parentfunction="predict" dim="1" factor="0" mode="complete" dynamic="0" variable="xp"/>
+<pragma file="ekf_core.cpp" line="67" pragmaType="array_partition" parentfunction="predict" dim="0" factor="0" mode="complete" dynamic="0" variable="FP"/>
+<pragma file="ekf_core.cpp" line="68" pragmaType="array_partition" parentfunction="predict" dim="0" factor="0" mode="complete" dynamic="0" variable="Ft"/>
+<pragma file="ekf_core.cpp" line="69" pragmaType="array_partition" parentfunction="predict" dim="0" factor="0" mode="complete" dynamic="0" variable="FPFt"/>
+<pragma file="ekf_core.cpp" line="86" pragmaType="inline" parentfunction="update_scalar" off="0" region="0" recursive="0"/>
+<pragma file="ekf_core.cpp" line="121" pragmaType="unroll" parentfunction="update_scalar" factor="-1" skip_exit_check="0"/>
+<pragma file="ekf_core.cpp" line="111" pragmaType="unroll" parentfunction="update_scalar" factor="-1" skip_exit_check="0"/>
+<pragma file="ekf_core.cpp" line="90" pragmaType="pipeline" parentfunction="update_scalar" off="0" ii="1" rewind="0" style=""/>
+<pragma file="ekf_core.cpp" line="88" pragmaType="array_partition" parentfunction="update_scalar" dim="1" factor="0" mode="complete" dynamic="0" variable="Ph"/>
+<pragma file="ekf_core.cpp" line="99" pragmaType="array_partition" parentfunction="update_scalar" dim="1" factor="0" mode="complete" dynamic="0" variable="K"/>
+<pragma file="ekf_core.cpp" line="105" pragmaType="array_partition" parentfunction="update_scalar" dim="0" factor="0" mode="complete" dynamic="0" variable="A"/>
+<pragma file="ekf_core.cpp" line="106" pragmaType="array_partition" parentfunction="update_scalar" dim="0" factor="0" mode="complete" dynamic="0" variable="AP"/>
+<pragma file="ekf_core.cpp" line="107" pragmaType="array_partition" parentfunction="update_scalar" dim="0" factor="0" mode="complete" dynamic="0" variable="At"/>
+<pragma file="ekf_core.cpp" line="108" pragmaType="array_partition" parentfunction="update_scalar" dim="0" factor="0" mode="complete" dynamic="0" variable="APAt"/>
+<pragma file="ekf_core.cpp" line="16" pragmaType="inline" parentfunction="matmul" off="0" region="0" recursive="0"/>
+<pragma file="ekf_core.cpp" line="19" pragmaType="pipeline" parentfunction="matmul" off="0" ii="1" rewind="0" style=""/>
+<pragma file="ekf_core.cpp" line="22" pragmaType="unroll" parentfunction="matmul" factor="-1" skip_exit_check="0"/>
+</pragmas>
